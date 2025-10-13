@@ -1,0 +1,1243 @@
+table Date
+	lineageTag: abcd
+
+	measure TimeAreaSelected =
+			
+			IF (
+			    HASONEVALUE(SlicerDate[SlicerArea]),
+			    SELECTEDVALUE(SlicerDate[SlicerArea]),
+			    "No Selection"
+			)
+		displayFolder: Measures
+		lineageTag: 178daa70-ce29-46f9-a621-bf30bd96bd7b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// PRIMARY DATE COLUMN
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: mmmm d\, yyyy
+		lineageTag: fd78fd1c-f8c0-4420-84eb-468f6439c4c0
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	/// GREGORIAN/CALENDAR COLUMNS
+	column CalendarYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 1537336d-9375-4ebb-b40d-e188ddf189e5
+		summarizeBy: none
+		sourceColumn: CalendarYear
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Calendar year (e.g., 2024)"
+
+	column CalendarMonthNumber
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f82d23a5-8b17-4cd1-a114-96f293a7a059
+		summarizeBy: none
+		sourceColumn: CalendarMonthNumber
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Month number for sorting"
+
+	column CalendarMonth
+		dataType: string
+		lineageTag: 2655095c-8345-4bab-ac15-5c3dfbad4712
+		summarizeBy: none
+		sourceColumn: CalendarMonth
+		sortByColumn: CalendarMonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "Month name (e.g., January)"
+
+	column CalendarQuarter
+		dataType: string
+		lineageTag: 31c2aac5-c541-4515-b660-a2533bdbcea7
+		summarizeBy: none
+		sourceColumn: CalendarQuarter
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "Calendar quarter (e.g., Q1)"
+
+	column CalendarYearQuarter
+		dataType: string
+		lineageTag: 6506f39e-ffbe-47e9-8e9a-bc2a3065879d
+		summarizeBy: none
+		sourceColumn: CalendarYearQuarter
+		sortByColumn: CalendarYearQuarterOrder
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "Calendar year and quarter (e.g., CY 2024 Q1)"
+
+	column CalendarYearQuarterOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 99c59d73-ac52-4acb-b85b-f1d7d2571477
+		summarizeBy: none
+		sourceColumn: CalendarYearQuarterOrder
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Sort order for CalendarYearQuarter"
+
+	column CalendarYearMonth
+		dataType: string
+		lineageTag: c03d2523-3ead-46ad-ba94-1f9a1ea551dc
+		summarizeBy: none
+		sourceColumn: CalendarYearMonth
+		sortByColumn: CalendarYearMonthOrder
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "Calendar year and month (e.g., CY 2024 Jan)"
+
+	column CalendarYearMonthOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4de24c2c-6c2e-4f3b-85ae-15187290dba3
+		summarizeBy: none
+		sourceColumn: CalendarYearMonthOrder
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Sort order for CalendarYearMonth"
+
+	/// DAY BREAKDOWN COLUMNS
+	column DayOfWeekNumber
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 183c1bd0-d0db-4b48-8bd3-94c93fe55da4
+		summarizeBy: none
+		sourceColumn: DayOfWeekNumber
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Day of week number for sorting"
+
+	column DayOfWeek
+		dataType: string
+		lineageTag: 6fade3b1-cb3d-4880-ac68-cb1b138a6d31
+		summarizeBy: none
+		sourceColumn: DayOfWeek
+		sortByColumn: DayOfWeekNumber
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "Day of week name (e.g., Monday)"
+
+	column DayOfMonth
+		dataType: int64
+		formatString: 0
+		lineageTag: be71b0cf-0fca-4183-960c-fa55516786f0
+		summarizeBy: none
+		sourceColumn: DayOfMonth
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Day of the month (1-31)"
+
+	column DayOfQuarter
+		dataType: int64
+		formatString: 0
+		lineageTag: aaf45591-24d3-4b8d-978d-26c25e3bf73c
+		summarizeBy: none
+		sourceColumn: DayOfQuarter
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Day number within the quarter"
+
+	column DayOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: a74b162a-dbae-406b-9882-a4c2d359d907
+		summarizeBy: none
+		sourceColumn: DayOfYear
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Day number within the year (1-366)"
+
+	/// FISCAL CALENDAR COLUMNS
+	column FiscalYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 8c9d2635-a098-478e-a19a-f4c8bd3914b9
+		summarizeBy: none
+		sourceColumn: FiscalYear
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Fiscal year (year-end June 30)"
+
+	column FiscalPeriodNumber
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f2178e05-25bb-4a12-88aa-836d67d028a0
+		summarizeBy: none
+		sourceColumn: FiscalPeriodNumber
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Fiscal period number for sorting"
+
+	column FiscalPeriod
+		dataType: string
+		lineageTag: d6cfa150-f6b9-4d04-a133-85a2cd06d48b
+		summarizeBy: none
+		sourceColumn: FiscalPeriod
+		sortByColumn: FiscalPeriodNumber
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "Fiscal period (e.g., P1, P2...P12)"
+
+	column FiscalYearQuarterNumber
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 896cc56b-2c62-4f6b-bde5-932b9ecf1867
+		summarizeBy: none
+		sourceColumn: FiscalYearQuarterNumber
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Fiscal quarter number for sorting"
+
+	column FiscalQuarter
+		dataType: string
+		lineageTag: c925c21b-c8dd-426e-ac84-1026d4bb165e
+		summarizeBy: none
+		sourceColumn: FiscalQuarter
+		sortByColumn: FiscalYearQuarterNumber
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "Fiscal quarter (e.g., Q1, Q2, Q3, Q4)"
+
+	column FiscalYearQuarter
+		dataType: string
+		lineageTag: 05498bbe-ea53-48e7-8b65-317e2b2d9103
+		summarizeBy: none
+		sourceColumn: FiscalYearQuarter
+		sortByColumn: FiscalYearQuarterOrder
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "Fiscal year and quarter (e.g., FY 2024 Q1)"
+
+	column FiscalYearQuarterOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f573155b-be8a-4ff9-87cd-dd5aa94e6636
+		summarizeBy: none
+		sourceColumn: FiscalYearQuarterOrder
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Sort order for FiscalYearQuarter"
+
+	column FiscalYearPeriod
+		dataType: string
+		lineageTag: 7339f2d5-1ac0-4f1a-9002-bafec4f570d8
+		summarizeBy: none
+		sourceColumn: FiscalYearPeriod
+		sortByColumn: FiscalYearPeriodOrder
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "Fiscal year and period (e.g., FY 2024 P1)"
+
+	column FiscalYearPeriodOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a6192199-19f2-4ff5-a2a0-5f3be8082bd6
+		summarizeBy: none
+		sourceColumn: FiscalYearPeriodOrder
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Sort order for FiscalYearPeriod"
+
+	/// FISCAL PERIOD DATES
+	column FiscalStartDate
+		dataType: dateTime
+		isHidden
+		formatString: mmmm d\, yyyy
+		lineageTag: 389176e0-3e74-492a-93e0-77cac2bdc8ef
+		summarizeBy: none
+		sourceColumn: FiscalStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation Description = "Start date of fiscal year"
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column PeriodStartDate
+		dataType: dateTime
+		isHidden
+		formatString: mmmm d\, yyyy
+		lineageTag: 4952bac4-d07a-4595-a7fe-e859dcf231b3
+		summarizeBy: none
+		sourceColumn: PeriodStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation Description = "Start date of fiscal period"
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column PeriodEndDate
+		dataType: dateTime
+		isHidden
+		formatString: mmmm d\, yyyy
+		lineageTag: 05c30f6b-2051-4f14-8629-e98f57c7d140
+		summarizeBy: none
+		sourceColumn: PeriodEndDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation Description = "End date of fiscal period"
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column PeriodEnd
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 369353be-40c3-46d3-b395-eb711591eb3d
+		summarizeBy: none
+		sourceColumn: PeriodEnd
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Period end code (JDE format)"
+
+	column FiscalQuarterStartDate
+		dataType: dateTime
+		isHidden
+		formatString: mmmm d\, yyyy
+		lineageTag: e303cda7-f88f-4abe-9cbc-1e370fb1fae5
+		summarizeBy: none
+		sourceColumn: FiscalQuarterStartDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation Description = "Start date of fiscal quarter"
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	/// FISCAL WEEK COLUMNS
+	column FiscalWeek
+		dataType: int64
+		formatString: 0
+		lineageTag: 0819ee3e-d556-42a3-a8f0-100908354236
+		summarizeBy: none
+		sourceColumn: FiscalWeek
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Fiscal week number within fiscal year"
+
+	column FiscalYearWeek
+		dataType: string
+		lineageTag: c2455788-0290-484b-ace4-91f37efff1ae
+		summarizeBy: none
+		sourceColumn: FiscalYearWeek
+		sortByColumn: FiscalYearWeekOrder
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "Fiscal year and week (e.g., FY 2024 W1)"
+
+	column FiscalYearWeekOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6b401f93-8aa1-4a26-89b6-6d39c0f1b88b
+		summarizeBy: none
+		sourceColumn: FiscalYearWeekOrder
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Sort order for FiscalYearWeek"
+
+	/// ADDITIONAL FISCAL DAY COLUMNS
+	column WeekOfFiscalPeriod
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 43b97828-9258-4c4f-b005-6d5c0d3f30c9
+		summarizeBy: none
+		sourceColumn: WeekOfFiscalPeriod
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Week number within fiscal period"
+
+	column DayOfFiscalPeriod
+		dataType: int64
+		formatString: 0
+		lineageTag: 087f4e41-56e7-4ee8-9702-28dd6ccd9c95
+		summarizeBy: none
+		sourceColumn: DayOfFiscalPeriod
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Day number within fiscal period"
+
+	column DayOfFiscalQuarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 2245a828-bd2e-400a-97b1-86317e0968df
+		summarizeBy: none
+		sourceColumn: DayOfFiscalQuarter
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Day number within fiscal quarter"
+
+	column DayOfFiscalYear
+		dataType: int64
+		formatString: 0
+		lineageTag: f01e6855-f2a5-4f86-9a48-1e2c817bdb7b
+		summarizeBy: none
+		sourceColumn: DayOfFiscalYear
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Day number within fiscal year"
+
+	/// ISO WEEK COLUMNS
+	column ISOYearWeek
+		dataType: string
+		lineageTag: 216a6973-29ee-46cf-99ee-3eb92adc5582
+		summarizeBy: none
+		sourceColumn: ISOYearWeek
+		sortByColumn: ISOYearWeekOrder
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "ISO 8601 year-week (e.g., 2024-W01)"
+
+	column ISOYearWeekOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 19693791-e296-45cd-8d53-81040a14baff
+		summarizeBy: none
+		sourceColumn: ISOYearWeekOrder
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Sort order for ISOYearWeek"
+
+	/// RETAIL 4-4-5 CALENDAR COLUMNS (Optional)
+	column RetailYear
+		dataType: int64
+		formatString: 0
+		lineageTag: fceaf6c1-43ee-48d0-8798-971f509ae5c8
+		summarizeBy: none
+		sourceColumn: RetailYear
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Retail calendar year (4-4-5 format)"
+
+	column RetailQuarterNumber
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3faf785e-d724-459e-817c-9a0d6209add6
+		summarizeBy: none
+		sourceColumn: RetailQuarterNumber
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Retail quarter number for sorting"
+
+	column RetailQuarter
+		dataType: string
+		lineageTag: 2e0e94c6-f84e-4a4e-b8c2-35d881257da0
+		summarizeBy: none
+		sourceColumn: RetailQuarter
+		sortByColumn: RetailQuarterNumber
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "Retail quarter (4-4-5 calendar)"
+
+	column RetailPeriodNumber
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c233b78c-bd56-4873-b86e-983938c76ac4
+		summarizeBy: none
+		sourceColumn: RetailPeriodNumber
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Retail period number for sorting"
+
+	column RetailYearQuarter
+		dataType: string
+		lineageTag: eea4b721-8085-4fc4-b96e-3d0c5e44d5c9
+		summarizeBy: none
+		sourceColumn: RetailYearQuarter
+		sortByColumn: RetailYearQuarterOrder
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "Retail year and quarter (e.g., RY 2024 Q1)"
+
+	column RetailYearQuarterOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 07627fab-23d5-4831-8770-9d1cee179bbb
+		summarizeBy: none
+		sourceColumn: RetailYearQuarterOrder
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Sort order for RetailYearQuarter"
+
+	column RetailPeriod
+		dataType: string
+		lineageTag: b0da42b5-9a23-4cf1-a2bb-255c2a6367f7
+		summarizeBy: none
+		sourceColumn: RetailPeriod
+		sortByColumn: RetailPeriodNumber
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "Retail period (4-4-5 calendar)"
+
+	column RetailYearPeriod
+		dataType: string
+		lineageTag: 994f6bdf-5322-401d-b360-34bcbda424fb
+		summarizeBy: none
+		sourceColumn: RetailYearPeriod
+		sortByColumn: RetailYearPeriodOrder
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "Retail year and period (e.g., RY 2024 P1)"
+
+	column RetailYearPeriodOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 114fa3b2-e4ff-4208-8786-f4547a934a49
+		summarizeBy: none
+		sourceColumn: RetailYearPeriodOrder
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Sort order for RetailYearPeriod"
+
+	/// 13-MONTH CALENDAR COLUMNS (Optional)
+	column Period13MYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 12006023-ad4f-4f4b-b790-3884d1cac336
+		summarizeBy: none
+		sourceColumn: Period13MYear
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "13-month calendar year"
+
+	column Period13MNumber
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f5a7812c-9704-4d0b-9348-90675e9642df
+		summarizeBy: none
+		sourceColumn: Period13MNumber
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "13-month period number for sorting"
+
+	column Period13M
+		dataType: string
+		lineageTag: e193678c-f4b6-4c69-b0da-bcebc9656e7a
+		summarizeBy: none
+		sourceColumn: Period13M
+		sortByColumn: Period13MNumber
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "13-month period (e.g., P1, P2...P13)"
+
+	column Period13MYearPeriod
+		dataType: string
+		lineageTag: 231ae1b1-69d7-4213-9498-57ada35dec57
+		summarizeBy: none
+		sourceColumn: Period13MYearPeriod
+		sortByColumn: Period13MYearPeriodOrder
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "13-month year and period (e.g., 13M 2024 P1)"
+
+	column Period13MYearPeriodOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d487da85-43ad-479f-b475-d6b762b85a21
+		summarizeBy: none
+		sourceColumn: Period13MYearPeriodOrder
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Sort order for Period13MYearPeriod"
+
+	/// LUNAR CALENDAR COLUMNS (Optional)
+	column LunarYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 3067718f-e789-4300-8987-c353337c9d93
+		summarizeBy: none
+		sourceColumn: LunarYear
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Lunar calendar year"
+
+	column LunarMonthNumber
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a6f0b082-226a-4b6f-9562-d0fe12b94e25
+		summarizeBy: none
+		sourceColumn: LunarMonthNumber
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Lunar month number for sorting"
+
+	column LunarMonth
+		dataType: string
+		lineageTag: 85c77166-0f4e-4db3-8ccf-5c4f9525727f
+		summarizeBy: none
+		sourceColumn: LunarMonth
+		sortByColumn: LunarMonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "Lunar month (simplified)"
+
+	column LunarYearMonth
+		dataType: string
+		lineageTag: 323921c0-f8d3-4ef8-922e-bd0f2a607299
+		summarizeBy: none
+		sourceColumn: LunarYearMonth
+		sortByColumn: LunarYearMonthOrder
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "Lunar year and month"
+
+	column LunarYearMonthOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f9e4801f-53c8-445d-887a-30a5dffb4250
+		summarizeBy: none
+		sourceColumn: LunarYearMonthOrder
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Sort order for LunarYearMonth"
+
+	/// JD EDWARDS INTEGRATION COLUMNS
+	column JulianDate
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2448cdd8-6356-461e-a373-fda337568d35
+		summarizeBy: none
+		sourceColumn: JulianDate
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Julian date (JD Edwards format)"
+
+	column JulianFiscalDateCode
+		dataType: string
+		isHidden
+		lineageTag: 12400a4c-b90c-4647-8933-a1d9e5a7fcee
+		summarizeBy: none
+		sourceColumn: JulianFiscalDateCode
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "JDE date pattern"
+
+	column JulianFiscalYearNo
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: fcd71185-88e1-4e94-8b05-45ade48e447c
+		summarizeBy: none
+		sourceColumn: JulianFiscalYearNo
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "JDE fiscal year indicator"
+
+	column JulianFiscalYearStart
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4c625e1e-c1f1-4162-a8e6-6c392424e80d
+		summarizeBy: none
+		sourceColumn: JulianFiscalYearStart
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "JDE fiscal year Julian date"
+
+	/// RELATIVE DATE INTELLIGENCE
+	column RelativeDate
+		dataType: int64
+		formatString: 0
+		lineageTag: f6ae4124-23fc-4dc9-a677-62419d7b941f
+		summarizeBy: none
+		sourceColumn: RelativeDate
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Days relative to today (0=today, -1=yesterday, +1=tomorrow)"
+
+	column RelativeFiscalPeriod
+		dataType: int64
+		formatString: 0
+		lineageTag: b6068d21-855f-42ca-a045-9c1cba6ab485
+		summarizeBy: none
+		sourceColumn: RelativeFiscalPeriod
+
+		annotation SummarizationSetBy = Manual
+
+		annotation Description = "Fiscal periods relative to current (0=current, -1=previous, +1=next)"
+
+	/// BUSINESS LOGIC COLUMNS
+	column IsWorkday
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c476364c-bb15-40b7-a4f2-d426bc8bcc42
+		summarizeBy: none
+		sourceColumn: IsWorkday
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Description = "True for weekdays (Mon-Fri), False for weekends"
+
+	column ISOYear
+		dataType: string
+		lineageTag: 29bc8220-5b9c-4760-8b92-bc2809303dd1
+		summarizeBy: none
+		sourceColumn: ISOYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column ISOWeek
+		dataType: string
+		lineageTag: 3fba373f-818d-4233-b578-ce3c0abeb728
+		summarizeBy: none
+		sourceColumn: ISOWeek
+
+		annotation SummarizationSetBy = Automatic
+
+	/// GREGORIAN/CALENDAR HIERARCHIES
+	hierarchy Calendar
+		lineageTag: 0cfb00de-7a89-4f1e-93ac-8ef810278bc8
+
+		level Year
+			lineageTag: 0196486b-c675-4bae-b587-67e7112bb5bc
+			column: CalendarYear
+
+		level Quarter
+			lineageTag: 41d464ab-cfe3-46a4-a255-9a67c1816114
+			column: CalendarQuarter
+
+		level Month
+			lineageTag: f746d66d-2c22-4d08-b440-a2b75ab2b46b
+			column: CalendarMonth
+
+		level Date
+			lineageTag: 7298fa4d-1bdf-4091-b1d9-3083112c151c
+			column: Date
+
+	hierarchy 'Calendar Year-Period'
+		lineageTag: 68eafc78-05af-4e78-a9b1-9b13bd10fd9c
+
+		level Year
+			lineageTag: 7391c301-2687-4ebe-9035-1a761a37f10a
+			column: CalendarYear
+
+		level Year-Quarter
+			lineageTag: 0232552f-6940-4d37-89a9-f169466a1ce2
+			column: CalendarYearQuarter
+
+		level Year-Month
+			lineageTag: 9ce8812a-cf7a-4e50-a464-11487a7728d4
+			column: CalendarYearMonth
+
+		level Date
+			lineageTag: 80175dce-7d6d-4782-b126-851f8293b84e
+			column: Date
+
+	/// FISCAL HIERARCHIES
+	hierarchy 'Fiscal Periods'
+		lineageTag: 261dbe55-c0c0-44c2-a4c4-fbd688be34f1
+
+		level Year
+			lineageTag: 633ddb86-b359-4471-a750-e74188b715e6
+			column: FiscalYear
+
+		level Quarter
+			lineageTag: 0e733306-84e2-4223-a83a-36e49692d465
+			column: FiscalQuarter
+
+		level Period
+			lineageTag: 5c20ed3b-df34-47e9-953e-5cfd5d08b92a
+			column: FiscalPeriod
+
+		level Date
+			lineageTag: e4a63e3f-9ee8-43b7-804e-b02584c985bf
+			column: Date
+
+	hierarchy 'Fiscal Year-Period'
+		lineageTag: a1b2c3d4-e5f6-7890-1234-567890abcdef
+
+		level Year
+			lineageTag: b2c3d4e5-f6g7-8901-2345-678901bcdefg
+			column: FiscalYear
+
+		level Year-Quarter
+			lineageTag: c3d4e5f6-g7h8-9012-3456-789012cdefgh
+			column: FiscalYearQuarter
+
+		level Year-Period
+			lineageTag: d4e5f6g7-h8i9-0123-4567-890123defghi
+			column: FiscalYearPeriod
+
+		level Date
+			lineageTag: e5f6g7h8-i9j0-1234-5678-901234efghij
+			column: Date
+
+	hierarchy 'Fiscal Weeks'
+		lineageTag: 4ffb4e26-7b21-45b1-9ee8-0c576691c1e4
+
+		level Year
+			lineageTag: 5888da4e-96cb-42a4-ae93-68918231cfc8
+			column: FiscalYear
+
+		level Year-Week
+			lineageTag: c0fc1972-61cf-402c-ba7c-f653ee557306
+			column: FiscalYearWeek
+
+		level Date
+			lineageTag: 8cdb003f-e556-475a-9e24-4939d8285845
+			column: Date
+
+	/// ISO WEEK HIERARCHY
+	hierarchy 'ISO Weeks'
+		lineageTag: f6g7h8i9-j0k1-2345-6789-012345fghijk
+
+		level Year-Week
+			lineageTag: g7h8i9j0-k1l2-3456-7890-123456ghijkl
+			column: ISOYearWeek
+
+		level Date
+			lineageTag: h8i9j0k1-l2m3-4567-8901-234567hijklm
+			column: Date
+
+	/// RETAIL 4-4-5 HIERARCHIES
+	hierarchy 'Retail Periods'
+		lineageTag: i9j0k1l2-m3n4-5678-9012-345678ijklmn
+
+		level Year
+			lineageTag: j0k1l2m3-n4o5-6789-0123-456789jklmno
+			column: RetailYear
+
+		level Quarter
+			lineageTag: k1l2m3n4-o5p6-7890-1234-567890klmnop
+			column: RetailQuarter
+
+		level Period
+			lineageTag: l2m3n4o5-p6q7-8901-2345-678901lmnopq
+			column: RetailPeriod
+
+		level Date
+			lineageTag: m3n4o5p6-q7r8-9012-3456-789012mnopqr
+			column: Date
+
+	hierarchy 'Retail Year-Period'
+		lineageTag: n4o5p6q7-r8s9-0123-4567-890123nopqrs
+
+		level Year
+			lineageTag: o5p6q7r8-s9t0-1234-5678-901234opqrst
+			column: RetailYear
+
+		level Year-Quarter
+			lineageTag: p6q7r8s9-t0u1-2345-6789-012345pqrstu
+			column: RetailYearQuarter
+
+		level Year-Period
+			lineageTag: q7r8s9t0-u1v2-3456-7890-123456qrstuv
+			column: RetailYearPeriod
+
+		level Date
+			lineageTag: r8s9t0u1-v2w3-4567-8901-234567rstuvw
+			column: Date
+
+	/// 13-MONTH HIERARCHIES
+	hierarchy '13-Month Periods'
+		lineageTag: s9t0u1v2-w3x4-5678-9012-345678stuvwx
+
+		level Year
+			lineageTag: t0u1v2w3-x4y5-6789-0123-456789tuvwxy
+			column: Period13MYear
+
+		level Period
+			lineageTag: u1v2w3x4-y5z6-7890-1234-567890uvwxyz
+			column: Period13M
+
+		level Date
+			lineageTag: v2w3x4y5-z6a7-8901-2345-678901vwxyza
+			column: Date
+
+	hierarchy '13-Month Year-Period'
+		lineageTag: w3x4y5z6-a7b8-9012-3456-789012wxyzab
+
+		level Year
+			lineageTag: x4y5z6a7-b8c9-0123-4567-890123xyzabc
+			column: Period13MYear
+
+		level Year-Period
+			lineageTag: y5z6a7b8-c9d0-1234-5678-901234yzabcd
+			column: Period13MYearPeriod
+
+		level Date
+			lineageTag: z6a7b8c9-d0e1-2345-6789-012345zabcde
+			column: Date
+
+	/// LUNAR HIERARCHIES
+	hierarchy 'Lunar Periods'
+		lineageTag: a7b8c9d0-e1f2-3456-7890-123456abcdef
+
+		level Year
+			lineageTag: b8c9d0e1-f2g3-4567-8901-234567bcdefg
+			column: LunarYear
+
+		level Month
+			lineageTag: c9d0e1f2-g3h4-5678-9012-345678cdefgh
+			column: LunarMonth
+
+		level Date
+			lineageTag: d0e1f2g3-h4i5-6789-0123-456789defghi
+			column: Date
+
+	hierarchy 'Lunar Year-Month'
+		lineageTag: e1f2g3h4-i5j6-7890-1234-567890efghij
+
+		level Year
+			lineageTag: f2g3h4i5-j6k7-8901-2345-678901fghijk
+			column: LunarYear
+
+		level Year-Month
+			lineageTag: g3h4i5j6-k7l8-9012-3456-789012ghijkl
+			column: LunarYearMonth
+
+		level Date
+			lineageTag: h4i5j6k7-l8m9-0123-4567-890123hijklm
+			column: Date
+
+	hierarchy ISO
+		lineageTag: 72c7db6a-210b-49b0-bbe4-e6f67052aa28
+
+		level ISOYear
+			lineageTag: dd39e4e3-9a24-467b-b79e-37d8174a00bf
+			column: ISOYear
+
+		level ISOWeek
+			lineageTag: 0921a162-69c8-4ce2-a313-2d143443a6a6
+			column: ISOWeek
+
+	partition Date = m
+		mode: import
+		source = ```
+				let
+				    /// ===== CONFIGURATION SECTION =====
+				    /// Modify these values to customize your date table
+				    Config = [
+				        StartDate = #date(2020, 1, 1),
+				        EndDate = #date(2030, 12, 31),
+				        FiscalYearEndMonth = 6,  // June = 6
+				        WeekStartDay = Day.Sunday,
+				        IncludeRetailCalendar = true,
+				        IncludeLunarCalendar = true,
+				        Include13MonthCalendar = true,
+				        UseOptimizedLabels = true
+				    ],
+				
+				    /// ===== BASE DATE TABLE =====
+				    DateList = List.Dates(Config[StartDate], Duration.Days(Config[EndDate] - Config[StartDate]) + 1, #duration(1,0,0,0)),
+				    DateTable = Table.FromList(DateList, Splitter.SplitByNothing(), {"Date"}),
+				    BaseTable = Table.TransformColumnTypes(DateTable, {{"Date", type date}}),
+				    
+				    /// ===== HELPER FUNCTIONS =====
+				    GetFiscalYear = (InputDate as date) as number => 
+				        if Date.Month(InputDate) > Config[FiscalYearEndMonth] 
+				        then Date.Year(InputDate) + 1 
+				        else Date.Year(InputDate),
+				    
+				    GetFiscalPeriod = (InputDate as date) as number => 
+				        let 
+				            CalMonth = Date.Month(InputDate)
+				        in 
+				            if CalMonth > Config[FiscalYearEndMonth] 
+				            then CalMonth - Config[FiscalYearEndMonth] 
+				            else CalMonth + (12 - Config[FiscalYearEndMonth]),
+				    
+				    /// ===== GREGORIAN CALENDAR COLUMNS =====
+				    AddCalendarCols = Table.AddColumn(BaseTable, "CalendarYear", each Date.Year([Date]), Int64.Type),
+				    AddCalMonthNo = Table.AddColumn(AddCalendarCols, "CalendarMonthNumber", each Date.Month([Date]), Int64.Type),
+				    AddCalMonth = Table.AddColumn(AddCalMonthNo, "CalendarMonth", each Date.ToText([Date], "MMMM"), type text),
+				    AddCalQuarter = Table.AddColumn(AddCalMonth, "CalendarQuarter", each "Q" & Number.ToText(Date.QuarterOfYear([Date])), type text),
+				    
+				    // Enhanced Year-Period Labels
+				    AddCalYrQtr = Table.AddColumn(AddCalQuarter, "CalendarYearQuarter", 
+				        each if Config[UseOptimizedLabels]
+				             then "CY " & Text.From([CalendarYear]) & " " & [CalendarQuarter]
+				             else Text.From([CalendarYear]) & " " & [CalendarQuarter], type text),
+				    AddCalYrQtrOrder = Table.AddColumn(AddCalYrQtr, "CalendarYearQuarterOrder", each [CalendarYear] * 10 + Date.QuarterOfYear([Date]), Int64.Type),
+				    AddCalYrMonth = Table.AddColumn(AddCalYrQtrOrder, "CalendarYearMonth", 
+				        each if Config[UseOptimizedLabels]
+				             then "CY " & Text.From([CalendarYear]) & " " & Text.Start([CalendarMonth], 3)
+				             else Text.From([CalendarYear]) & " " & Text.Start([CalendarMonth], 3), type text),
+				    AddCalYrMonthOrder = Table.AddColumn(AddCalYrMonth, "CalendarYearMonthOrder", each [CalendarYear] * 100 + [CalendarMonthNumber], Int64.Type),
+				
+				    /// ===== DAY BREAKDOWN COLUMNS =====
+				    AddDayOfWeekNum = Table.AddColumn(AddCalYrMonthOrder, "DayOfWeekNumber", each Date.DayOfWeek([Date], Config[WeekStartDay]) + 1, Int64.Type),
+				    AddDayOfWeek = Table.AddColumn(AddDayOfWeekNum, "DayOfWeek", each Date.ToText([Date], "dddd"), type text),
+				    AddDayOfMonth = Table.AddColumn(AddDayOfWeek, "DayOfMonth", each Date.Day([Date]), Int64.Type),
+				    AddDayOfQuarter = Table.AddColumn(AddDayOfMonth, "DayOfQuarter", each Duration.Days([Date] - Date.StartOfQuarter([Date])) + 1, Int64.Type),
+				    AddDayOfYear = Table.AddColumn(AddDayOfQuarter, "DayOfYear", each Date.DayOfYear([Date]), Int64.Type),
+				
+				    /// ===== FISCAL CALENDAR COLUMNS =====
+				    AddFiscalYear = Table.AddColumn(AddDayOfYear, "FiscalYear", each GetFiscalYear([Date]), Int64.Type),
+				    AddFiscalPeriodNo = Table.AddColumn(AddFiscalYear, "FiscalPeriodNumber", each GetFiscalPeriod([Date]), Int64.Type),
+				    AddFiscalPeriod = Table.AddColumn(AddFiscalPeriodNo, "FiscalPeriod", each "P" & Number.ToText([FiscalPeriodNumber]), type text),
+				    AddFiscalQtrNo = Table.AddColumn(AddFiscalPeriod, "FiscalYearQuarterNumber", each Number.RoundUp([FiscalPeriodNumber] / 3), Int64.Type),
+				    AddFiscalQuarter = Table.AddColumn(AddFiscalQtrNo, "FiscalQuarter", each "Q" & Number.ToText([FiscalYearQuarterNumber]), type text),
+				    
+				    // Enhanced Fiscal Year-Period Labels
+				    AddFiscalYrQtr = Table.AddColumn(AddFiscalQuarter, "FiscalYearQuarter", 
+				        each if Config[UseOptimizedLabels]
+				             then "FY " & Text.From([FiscalYear]) & " " & [FiscalQuarter]
+				             else Text.From([FiscalYear]) & " " & [FiscalQuarter], type text),
+				    AddFiscalYrQtrOrder = Table.AddColumn(AddFiscalYrQtr, "FiscalYearQuarterOrder", each [FiscalYear] * 10 + [FiscalYearQuarterNumber], Int64.Type),
+				    AddFiscalYrPer = Table.AddColumn(AddFiscalYrQtrOrder, "FiscalYearPeriod", 
+				        each if Config[UseOptimizedLabels]
+				             then "FY " & Text.From([FiscalYear]) & " " & [FiscalPeriod]
+				             else Text.From([FiscalYear]) & " " & [FiscalPeriod], type text),
+				    AddFiscalYrPerOrder = Table.AddColumn(AddFiscalYrPer, "FiscalYearPeriodOrder", each [FiscalYear] * 100 + [FiscalPeriodNumber], Int64.Type),
+				
+				    /// ===== FISCAL PERIOD DATES =====
+				    AddFiscalStartDate = Table.AddColumn(AddFiscalYrPerOrder, "FiscalStartDate", 
+				        each #date(if Date.Month([Date]) > Config[FiscalYearEndMonth] then Date.Year([Date]) else Date.Year([Date]) - 1, 
+				                  if Config[FiscalYearEndMonth] = 12 then 1 else Config[FiscalYearEndMonth] + 1, 1), type date),
+				    AddPeriodStartDate = Table.AddColumn(AddFiscalStartDate, "PeriodStartDate", 
+				        each Date.StartOfMonth(Date.AddMonths([FiscalStartDate], [FiscalPeriodNumber] - 1)), type date),
+				    AddPeriodEndDate = Table.AddColumn(AddPeriodStartDate, "PeriodEndDate", 
+				        each Date.AddDays(Date.AddMonths([PeriodStartDate], 1), -1), type date),
+				    AddPeriodEndCode = Table.AddColumn(AddPeriodEndDate, "PeriodEnd", 
+				        each let 
+				            endDt = [PeriodEndDate],
+				            century = if Date.Year(endDt) < 2000 then 0 else 1,
+				            yy = Number.Mod(Date.Year(endDt), 100),
+				            dayOfYear = Date.DayOfYear(endDt)
+				        in century * 100000 + yy * 1000 + dayOfYear, Int64.Type),
+				    AddFiscalQtrStart = Table.AddColumn(AddPeriodEndCode, "FiscalQuarterStartDate", 
+				        each Date.StartOfMonth(Date.AddMonths([FiscalStartDate], ([FiscalYearQuarterNumber] - 1) * 3)), type date),
+				
+				    /// ===== FISCAL WEEK CALCULATIONS =====
+				    AddFiscalWeek = Table.AddColumn(AddFiscalQtrStart, "FiscalWeek", 
+				        each Number.RoundDown(Duration.Days([Date] - [FiscalStartDate]) / 7) + 1, Int64.Type),
+				    AddFiscalYrWeek = Table.AddColumn(AddFiscalWeek, "FiscalYearWeek", 
+				        each if Config[UseOptimizedLabels]
+				             then "FY " & Text.From([FiscalYear]) & " W" & Number.ToText([FiscalWeek])
+				             else Text.From([FiscalYear]) & " W" & Number.ToText([FiscalWeek]), type text),
+				    AddFiscalYrWeekOrder = Table.AddColumn(AddFiscalYrWeek, "FiscalYearWeekOrder", each [FiscalYear] * 100 + [FiscalWeek], Int64.Type),
+				    
+				    /// ===== ADDITIONAL FISCAL DAY COLUMNS =====
+				    AddWeekOfFiscalPeriod = Table.AddColumn(AddFiscalYrWeekOrder, "WeekOfFiscalPeriod", 
+				        each Number.RoundDown(Duration.Days([Date] - [PeriodStartDate]) / 7) + 1, Int64.Type),
+				    AddDayOfFiscalPeriod = Table.AddColumn(AddWeekOfFiscalPeriod, "DayOfFiscalPeriod", 
+				        each Duration.Days([Date] - [PeriodStartDate]) + 1, Int64.Type),
+				    AddDayOfFiscalQuarter = Table.AddColumn(AddDayOfFiscalPeriod, "DayOfFiscalQuarter", 
+				        each Duration.Days([Date] - [FiscalQuarterStartDate]) + 1, Int64.Type),
+				    AddDayOfFiscalYear = Table.AddColumn(AddDayOfFiscalQuarter, "DayOfFiscalYear", 
+				        each Duration.Days([Date] - [FiscalStartDate]) + 1, Int64.Type),
+				
+				    /// ===== ISO WEEK CALENDAR =====
+				    AddISOYearWeek = Table.AddColumn(AddDayOfFiscalYear, "ISOYearWeek", 
+				        each let 
+				            isoYear = Date.Year(Date.AddDays([Date], 3 - Date.DayOfWeek([Date], Day.Monday))),
+				            isoWeek = Date.WeekOfYear([Date], Day.Monday)
+				        in Text.From(isoYear) & "-W" & Text.PadStart(Text.From(isoWeek), 2, "0"), type text),
+				    AddISOYearWeekOrder = Table.AddColumn(AddISOYearWeek, "ISOYearWeekOrder", 
+				        each let 
+				            isoYr = Date.Year(Date.AddDays([Date], 3 - Date.DayOfWeek([Date], Day.Monday))),
+				            isoWk = Date.WeekOfYear([Date], Day.Monday)
+				        in isoYr * 100 + isoWk, Int64.Type),
+				    AddISOYear = Table.AddColumn(AddISOYearWeekOrder, "ISOYear", 
+				        each let 
+				            isoYear = Date.Year(Date.AddDays([Date], 3 - Date.DayOfWeek([Date], Day.Monday)))
+				        in Text.From(isoYear), type text),        
+				    AddISOWeek = Table.AddColumn(AddISOYear, "ISOWeek", 
+				        each let 
+				            isoWeek = Date.WeekOfYear([Date], Day.Monday)
+				        in Text.PadStart(Text.From(isoWeek), 2, "0"), type text),
+				
+				    /// ===== CONDITIONAL RETAIL CALENDAR =====
+				    AddRetailColumns = if Config[IncludeRetailCalendar] then
+				        let
+				            RetailYear = Table.AddColumn(AddISOWeek, "RetailYear", each [FiscalYear], Int64.Type),
+				            RetailQtrNo = Table.AddColumn(RetailYear, "RetailQuarterNumber", each [FiscalYearQuarterNumber], Int64.Type),
+				            RetailQtr = Table.AddColumn(RetailQtrNo, "RetailQuarter", each "Q" & Number.ToText([RetailQuarterNumber]), type text),
+				            RetailPerNo = Table.AddColumn(RetailQtr, "RetailPeriodNumber", each [FiscalPeriodNumber], Int64.Type),
+				            RetailYrQtr = Table.AddColumn(RetailPerNo, "RetailYearQuarter", 
+				                each if Config[UseOptimizedLabels]
+				                     then "RY " & Text.From([RetailYear]) & " " & [RetailQuarter]
+				                     else Text.From([RetailYear]) & " " & [RetailQuarter], type text),
+				            RetailYrQtrOrder = Table.AddColumn(RetailYrQtr, "RetailYearQuarterOrder", each [RetailYear] * 10 + [RetailQuarterNumber], Int64.Type),
+				            RetailPer = Table.AddColumn(RetailYrQtrOrder, "RetailPeriod", each "P" & Number.ToText([RetailPeriodNumber]), type text),
+				            RetailYrPer = Table.AddColumn(RetailPer, "RetailYearPeriod", 
+				                each if Config[UseOptimizedLabels]
+				                     then "RY " & Text.From([RetailYear]) & " " & [RetailPeriod]
+				                     else Text.From([RetailYear]) & " " & [RetailPeriod], type text),
+				            RetailYrPerOrder = Table.AddColumn(RetailYrPer, "RetailYearPeriodOrder", each [RetailYear] * 100 + [RetailPeriodNumber], Int64.Type)
+				        in RetailYrPerOrder
+				    else AddISOYearWeekOrder,
+				
+				    /// ===== CONDITIONAL 13-MONTH CALENDAR =====
+				    Add13MonthColumns = if Config[Include13MonthCalendar] then
+				        let
+				            P13MYear = Table.AddColumn(AddRetailColumns, "Period13MYear", each [FiscalYear], Int64.Type),
+				            P13MNo = Table.AddColumn(P13MYear, "Period13MNumber", each Number.RoundUp([FiscalWeek] / 4), Int64.Type),
+				            P13M = Table.AddColumn(P13MNo, "Period13M", each "P" & Number.ToText([Period13MNumber]), type text),
+				            P13MYrPer = Table.AddColumn(P13M, "Period13MYearPeriod", 
+				                each if Config[UseOptimizedLabels]
+				                     then "13M " & Text.From([Period13MYear]) & " " & [Period13M]
+				                     else Text.From([Period13MYear]) & " " & [Period13M], type text),
+				            P13MYrPerOrder = Table.AddColumn(P13MYrPer, "Period13MYearPeriodOrder", each [Period13MYear] * 100 + [Period13MNumber], Int64.Type)
+				        in P13MYrPerOrder
+				    else AddRetailColumns,
+				
+				    /// ===== CONDITIONAL LUNAR CALENDAR =====
+				    AddLunarColumns = if Config[IncludeLunarCalendar] then
+				        let
+				            LunarYear = Table.AddColumn(Add13MonthColumns, "LunarYear", each [CalendarYear], Int64.Type),
+				            LunarMonthNo = Table.AddColumn(LunarYear, "LunarMonthNumber", each [CalendarMonthNumber], Int64.Type),
+				            LunarMonth = Table.AddColumn(LunarMonthNo, "LunarMonth", each "P" & Number.ToText([LunarMonthNumber]), type text),
+				            LunarYrMonth = Table.AddColumn(LunarMonth, "LunarYearMonth", each Text.From([LunarYear]) & " " & [LunarMonth], type text),
+				            LunarYrMonthOrder = Table.AddColumn(LunarYrMonth, "LunarYearMonthOrder", each [LunarYear] * 100 + [LunarMonthNumber], Int64.Type)
+				        in LunarYrMonthOrder
+				    else Add13MonthColumns,
+				
+				    /// ===== JD EDWARDS INTEGRATION =====
+				    AddJulianDate = Table.AddColumn(AddLunarColumns, "JDEDate", 
+				        each let 
+				            yr = Date.Year([Date]), 
+				            century = if yr < 2000 then 0 else if yr < 2100 then 1 else if yr < 2200 then 2 else 3,
+				            yy = Number.Mod(yr, 100), 
+				            daynum = Date.DayOfYear([Date]) 
+				        in century * 100000 + yy * 1000 + daynum, Int64.Type),
+				    AddCDDTPN = Table.AddColumn(AddJulianDate, "CDDTPN", each "A", type text),
+				    AddCDFY = Table.AddColumn(AddCDDTPN, "CDFY", each if [FiscalYear] > Date.Year([Date]) then 1 else 0, Int64.Type),
+				    AddCDDFYJ = Table.AddColumn(AddCDFY, "CDDFYJ", 
+				        each let 
+				            fyStart = [FiscalStartDate],
+				            century = if Date.Year(fyStart) < 2000 then 0 else 1,
+				            yy = Number.Mod(Date.Year(fyStart), 100),
+				            dayOfYear = Date.DayOfYear(fyStart)
+				        in century * 100000 + yy * 1000 + dayOfYear, Int64.Type),
+				
+				    /// ===== RELATIVE DATE INTELLIGENCE =====
+				    Today = Date.From(DateTime.LocalNow()),
+				    AddRelativeDate = Table.AddColumn(AddCDDFYJ, "RelativeDate", each Duration.Days([Date] - Today), Int64.Type),
+				    AddRelativeFiscalPeriod = Table.AddColumn(AddRelativeDate, "RelativeFiscalPeriod", 
+				        each let 
+				            currentFiscalYear = GetFiscalYear(Today),
+				            currentFiscalPeriod = GetFiscalPeriod(Today),
+				            currentFiscalIndex = currentFiscalYear * 12 + (currentFiscalPeriod - 1),
+				            rowFiscalIndex = [FiscalYear] * 12 + ([FiscalPeriodNumber] - 1)
+				        in rowFiscalIndex - currentFiscalIndex, Int64.Type),
+				
+				    /// ===== BUSINESS LOGIC =====
+				    AddIsWorkday = Table.AddColumn(AddRelativeFiscalPeriod, "IsWorkday", 
+				        each not List.Contains({1,7}, [DayOfWeekNumber]), type logical),
+				    #"Renamed Columns" = Table.RenameColumns(AddIsWorkday,{{"JDEDate", "JulianDate"}, {"CDDFYJ", "JulianFiscalYearStart"}, {"CDFY", "JulianFiscalYearNo"}, {"CDDTPN", "JulianFiscalDateCode"}})
+				
+				in
+				    #"Renamed Columns"
+				```
+
+	annotation ConfigStartDate = "2020-01-01"
+
+	annotation ConfigEndDate = "2030-12-31"
+
+	annotation ConfigFiscalYearEnd = "June"
+
+	annotation ConfigWeekStartDay = "Sunday"
+
+	annotation ConfigIncludeRetailCalendar = "true"
+
+	annotation ConfigIncludeLunarCalendar = "true"
+
+	annotation ConfigInclude13MonthCalendar = "true"
+
+	annotation Description = "Comprehensive date dimension with multiple calendar types optimized for performance and usability"
+
+	annotation LastOptimized = "2025-10-10"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

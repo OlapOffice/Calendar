@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "tabOrder": [
+    "Date",
+    "SlicerDate",
+    "FiscalTimeIntelligence",
+    "Date_DAX"
+  ],
+  "defaultTab": "SlicerDate"
+}

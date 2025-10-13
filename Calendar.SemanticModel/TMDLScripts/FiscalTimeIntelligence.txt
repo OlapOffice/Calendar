@@ -1,0 +1,161 @@
+createOrReplace
+
+	table FiscalTimeIntelligence
+		lineageTag: 2b7a913e-a5f9-4b1f-8d96-cb1234567890
+
+		calculationGroup
+
+			calculationItem Prd = SELECTEDMEASURE()
+
+			calculationItem Prv = ```
+					IF( 
+					    ISINSCOPE('Date'[FiscalYearPeriodOrder]), 
+					    // When viewing at the period level 
+					    CALCULATE( 
+					        SELECTEDMEASURE(), 
+					        FILTER( 
+					            ALL('Date'), 
+					            'Date'[FiscalYearPeriodOrder] = 
+					                SELECTEDVALUE('Date'[FiscalYearPeriodOrder]) - 1000 
+					        ) 
+					    ), 
+					    // When viewing at a higher level (total) 
+					    VAR MaxFYPOrder = MAX('Date'[FiscalYearPeriodOrder]) 
+					    VAR MinFYPOrder = MIN('Date'[FiscalYearPeriodOrder]) 
+					    RETURN 
+					    CALCULATE( 
+					        SELECTEDMEASURE(), 
+					        FILTER( 
+					            ALL('Date'), 
+					            'Date'[FiscalYearPeriodOrder] >= MinFYPOrder - 1000 && 
+					            'Date'[FiscalYearPeriodOrder] <= MaxFYPOrder - 1000 
+					        ) 
+					    ) 
+					) 
+					```
+
+			calculationItem 'Prd v Prv' = ```
+					    VAR _CurrentTime = 
+					        CALCULATE( SELECTEDMEASURE(), 'FiscalTimeIntelligence'[TimeIntelligence] = "Prd" ) 
+					    VAR _PreviousTime = 
+					        CALCULATE( SELECTEDMEASURE(), 'FiscalTimeIntelligence'[TimeIntelligence] = "Prv" ) 
+					    VAR _CurrentVsPrevious = 
+					        IF( NOT ISBLANK( _CurrentTime ), _CurrentTime ) 
+					            - IF( NOT ISBLANK( _PreviousTime ), _PreviousTime ) 
+					    RETURN 
+					        _CurrentVsPrevious 
+					```
+
+			calculationItem 'Prd v Prv %' = ```
+					    VAR _CurrentVsPrior = 
+					        CALCULATE( SELECTEDMEASURE(), 'FiscalTimeIntelligence'[TimeIntelligence] = "Prd v Prv" ) 
+					    VAR _Prior = 
+					        CALCULATE( SELECTEDMEASURE(), 'FiscalTimeIntelligence'[TimeIntelligence] = "Prv" ) 
+					    VAR _Percentage = 
+					        IF( 
+					            NOT ISBLANK( _Prior ) && NOT ISBLANK( _CurrentVsPrior ), 
+					            ROUND( DIVIDE( _CurrentVsPrior, _Prior ) * 100, 2 ) 
+					        ) 
+					    RETURN 
+					        _Percentage 
+					```
+
+			/// Year-to-Date (cumulative from fiscal year start to current period)
+			calculationItem Ytd = ```
+					IF( 
+					    ISINSCOPE('Date'[FiscalYearPeriodOrder]), 
+					    // When viewing at the period level 
+					    CALCULATE( 
+					        SELECTEDMEASURE(), 
+					        FILTER( 
+					            ALL('Date'), 
+					            'Date'[FiscalYearPeriodOrder] = 
+					                SELECTEDVALUE('Date'[FiscalYearPeriodOrder]) 
+					        ) 
+					    ), 
+					    // When viewing at a higher level (total) 
+					    VAR MaxFYPOrder = MAX('Date'[FiscalYearPeriodOrder]) 
+					    VAR MinFYPOrder = LEFT( MIN('Date'[FiscalYearPeriodOrder]), 4 ) * 100 + 1 
+					    RETURN 
+					    CALCULATE( 
+					        SELECTEDMEASURE(), 
+					        FILTER( 
+					            ALL('Date'), 
+					            'Date'[FiscalYearPeriodOrder] >= MinFYPOrder && 
+					            'Date'[FiscalYearPeriodOrder] <= MaxFYPOrder 
+					        ) 
+					    ) 
+					) 
+					```
+
+			calculationItem 'Ytd PY' = ```
+					IF( 
+					    ISINSCOPE('Date'[FiscalYearPeriodOrder]), 
+					    // When viewing at the period level 
+					    CALCULATE( 
+					        SELECTEDMEASURE(), 
+					        FILTER( 
+					            ALL('Date'), 
+					            'Date'[FiscalYearPeriodOrder] = 
+					                SELECTEDVALUE('Date'[FiscalYearPeriodOrder]) - 100 
+					        ) 
+					    ), 
+					    // When viewing at a higher level (total) 
+					    VAR MaxFYPOrder = MAX('Date'[FiscalYearPeriodOrder]) - 100 
+					    VAR MinFYPOrder = ( (LEFT( MIN('Date'[FiscalYearPeriodOrder]), 4 ) - 1) * 100 ) + 1 
+					    RETURN 
+					    CALCULATE( 
+					        SELECTEDMEASURE(), 
+					        FILTER( 
+					            ALL('Date'), 
+					            'Date'[FiscalYearPeriodOrder] >= MinFYPOrder && 
+					            'Date'[FiscalYearPeriodOrder] <= MaxFYPOrder 
+					        ) 
+					    ) 
+					) 
+					```
+
+			calculationItem 'Ytd v Ytd PY' = ```
+					    VAR _CurrentTime = 
+					        CALCULATE( SELECTEDMEASURE(), 'FiscalTimeIntelligence'[TimeIntelligence] = "Ytd" ) 
+					    VAR _PreviousTime = 
+					        CALCULATE( SELECTEDMEASURE(), 'FiscalTimeIntelligence'[TimeIntelligence] = "Ytd PY" ) 
+					    VAR _CurrentVsPrevious = 
+					        IF( NOT ISBLANK( _CurrentTime ), _CurrentTime ) 
+					            - IF( NOT ISBLANK( _PreviousTime ), _PreviousTime ) 
+					    RETURN 
+					        _CurrentVsPrevious 
+					```
+
+			calculationItem 'Ytd v Ytd PY %' = ```
+					                        VAR _CurrentVsPrior = 
+					                            CALCULATE( SELECTEDMEASURE(), 'FiscalTimeIntelligence'[TimeIntelligence] = "Ytd v Ytd PY" ) 
+					                        VAR _Prior = 
+					                            CALCULATE( SELECTEDMEASURE(), 'FiscalTimeIntelligence'[TimeIntelligence] = "Ytd PY" ) 
+					                        VAR _Percentage = 
+					                            IF( 
+					                                NOT ISBLANK( _Prior ) && NOT ISBLANK( _CurrentVsPrior ), 
+					                                ROUND( DIVIDE( _CurrentVsPrior, _Prior ) * 100, 2 ) 
+					                            ) 
+					                        RETURN 
+					                            _Percentage
+					```
+
+		column TimeIntelligence
+			dataType: string
+			lineageTag: febf9d12-3456-4cba-8f00-9db2f0c33e8e
+			summarizeBy: none
+			sourceColumn: Name
+			sortByColumn: Ordinal
+
+			annotation SummarizationSetBy = Automatic
+
+		column Ordinal
+			dataType: int64
+			formatString: 0
+			lineageTag: 61c24d77-6456-49aa-af02-c1310f06aff2
+			summarizeBy: sum
+			sourceColumn: Ordinal
+
+			annotation SummarizationSetBy = Automatic
+

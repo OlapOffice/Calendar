@@ -1,0 +1,104 @@
+createOrReplace
+
+	table Date_DAX
+		lineageTag: b2573b82-a952-443d-aebf-e265f6429a5b
+		dataCategory: Time
+
+		column Date
+			isKey
+			formatString: General Date
+			lineageTag: bf549268-705f-45b7-bb7a-c19af6f86880
+			summarizeBy: none
+			isNameInferred
+			sourceColumn: [Date]
+
+			annotation SummarizationSetBy = Automatic
+
+		column Year
+			formatString: 0
+			lineageTag: 19d9ec7c-0e30-4c59-bc0d-8bbfd6892d37
+			summarizeBy: sum
+			isNameInferred
+			sourceColumn: [Year]
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Month Number'
+			formatString: 0
+			lineageTag: d64b0cdf-8748-4e4a-914f-8eb1a12d8138
+			summarizeBy: sum
+			isNameInferred
+			sourceColumn: [Month Number]
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Month Name'
+			lineageTag: cbef2358-a981-4ef7-8def-0385a65a3338
+			summarizeBy: none
+			isNameInferred
+			sourceColumn: [Month Name]
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Month Year'
+			lineageTag: ef7ce28d-5c6d-414a-a07a-e8b900848d13
+			summarizeBy: none
+			isNameInferred
+			sourceColumn: [Month Year]
+
+			annotation SummarizationSetBy = Automatic
+
+		column Quarter
+			lineageTag: e6f1928c-486d-4f7b-84cb-2ec2ed074b6a
+			summarizeBy: none
+			isNameInferred
+			sourceColumn: [Quarter]
+
+			annotation SummarizationSetBy = Automatic
+
+		column 'Year Quarter'
+			lineageTag: dcbc8f72-05b0-4985-817a-bb8d7e8e0909
+			summarizeBy: none
+			isNameInferred
+			sourceColumn: [Year Quarter]
+
+			annotation SummarizationSetBy = Automatic
+
+		column Day
+			formatString: 0
+			lineageTag: 5eda6648-08bf-4a41-816e-0e1c3c6c94be
+			summarizeBy: sum
+			isNameInferred
+			sourceColumn: [Day]
+
+			annotation SummarizationSetBy = Automatic
+
+		column Date1
+			formatString: General Date
+			lineageTag: 57ce9099-66b1-4caa-9b2b-e3fe6f17e2f5
+			summarizeBy: none
+			isNameInferred
+			sourceColumn: [Date1]
+
+			annotation SummarizationSetBy = Automatic
+
+		partition Date_DAX = calculated
+			mode: import
+			source =
+					
+					ADDCOLUMNS (
+					    CALENDAR ( DATE ( 2010, 1, 1 ), DATE ( 2030, 12, 31 ) ),
+					    "Year", YEAR ( [Date] ),
+					    "Month Number", MONTH ( [Date] ),
+					    "Month Name", FORMAT ( [Date], "MMMM" ),
+					    "Month Year", FORMAT ( [Date], "MMM YYYY" ),
+					    "Quarter", "Q" & FORMAT ( [Date], "Q" ),
+					    "Year Quarter",
+					        FORMAT ( [Date], "YYYY" ) & " Q"
+					            & FORMAT ( [Date], "Q" ),
+					    "Day", DAY ( [Date] ),
+					    "Date1", [Date]
+					)
+
+		annotation PBI_Id = 71a8bb4fcadf4364841a546523efbfa0
+

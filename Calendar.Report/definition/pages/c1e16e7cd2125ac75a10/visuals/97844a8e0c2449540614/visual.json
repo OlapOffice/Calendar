@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "97844a8e0c2449540614",
+  "position": {
+    "x": 4.1698113207547749,
+    "y": 74.223500410846341,
+    "z": 8000,
+    "height": 430,
+    "width": 510,
+    "tabOrder": 3000
+  },
+  "visualGroup": {
+    "displayName": "Calendar",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "eebcf789e23c3671a48a",
+  "isHidden": true
+}

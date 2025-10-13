@@ -1,0 +1,108 @@
+createOrReplace
+
+	table SlicerDate
+		lineageTag: 2e55a1f3-d3c4-4ebf-9a8d-5f8f71dcc999
+
+		/// Hidden level identifier (used internally for grouping)
+		column SlicerLevel
+			isHidden
+			lineageTag: e70d4f60-d010-42c9-be27-b25ee276b6fe
+			summarizeBy: none
+			sourceColumn: [Value1]
+			sortByColumn: SlicerFieldOrder
+
+			relatedColumnDetails
+				groupByColumn: SlicerField
+
+			annotation SummarizationSetBy = Automatic
+
+		/// Hidden column storing the actual field reference (as NAMEOF)
+		column SlicerField
+			isHidden
+			lineageTag: 43b9c20c-4661-47a3-8ffc-e89245c4d55c
+			summarizeBy: none
+			sourceColumn: [Value2]
+			sortByColumn: SlicerFieldOrder
+
+			extendedProperty ParameterMetadata =
+					{
+					  "version": 3,
+					  "kind": 2
+					}
+
+			annotation SummarizationSetBy = Automatic
+
+		/// Hidden numeric column for sorting the Time selections
+		column SlicerFieldOrder
+			isHidden
+			formatString: 0
+			lineageTag: 227c2b96-d532-4a2e-a1f6-246257641cae
+			summarizeBy: sum
+			sourceColumn: [Value3]
+
+			annotation SummarizationSetBy = Automatic
+
+		/// Category name (calendar type) for each time selection
+		column SlicerArea
+			lineageTag: e418db70-0e7f-4e3b-a90a-01b167c03c3e
+			summarizeBy: none
+			sourceColumn: [Value4]
+			sortByColumn: SlicerAreaOrder
+
+			annotation SummarizationSetBy = Automatic
+
+		/// Numeric column for sorting categories
+		column SlicerAreaOrder
+			isHidden
+			formatString: 0
+			lineageTag: a5d27544-7346-4955-8aa7-2f3fce3adc1f
+			summarizeBy: sum
+			sourceColumn: [Value5]
+
+			annotation SummarizationSetBy = Automatic
+
+		/// Description of the selection (this is the user-facing label)
+		column SlicerDescription
+			lineageTag: 707f0980-57bb-479f-b031-8488be192fb9
+			summarizeBy: none
+			sourceColumn: [Value6]
+
+			annotation SummarizationSetBy = Automatic
+
+		/// Partition listing all hierarchy level options across calendar types
+		partition SlicerDateValues = calculated
+			mode: import
+			source = ```
+					{ 
+					        // Gregorian/Calendar hierarchy levels 
+					        ("CalendarYear",    NAMEOF('Date'[CalendarYear]),        0, "Calendar", 0, "Calendar Year"), 
+					        ("CalendarQuarter", NAMEOF('Date'[CalendarYearQuarter]), 1, "Calendar", 0, "Calendar Quarter"), 
+					        ("CalendarMonth",   NAMEOF('Date'[CalendarYearMonth]),   2, "Calendar", 0, "Calendar Month"), 
+					
+					        // Fiscal hierarchy levels 
+					        ("FiscalYear",    NAMEOF('Date'[FiscalYear]),        3, "Fiscal", 1, "Fiscal Year"), 
+					        ("FiscalQuarter", NAMEOF('Date'[FiscalYearQuarter]), 4, "Fiscal", 1, "Fiscal Quarter"), 
+					        ("FiscalPeriod",  NAMEOF('Date'[FiscalYearPeriod]),  5, "Fiscal", 1, "Fiscal Period"), 
+					        ("FiscalWeek",    NAMEOF('Date'[FiscalYearWeek]),    6, "Fiscal", 1, "Fiscal Week"), 
+					
+					        // ISO week (ISO 8601 calendar) 
+					        ("ISOWeek", NAMEOF('Date'[ISOYearWeek]), 7, "ISO", 2, "ISO Week"), 
+					
+					        // Retail 4-4-5 calendar hierarchy levels 
+					        ("RetailYear",    NAMEOF('Date'[RetailYear]),        8, "Retail", 3, "Retail Year"), 
+					        ("RetailQuarter", NAMEOF('Date'[RetailYearQuarter]), 9, "Retail", 3, "Retail Quarter"), 
+					        ("RetailPeriod",  NAMEOF('Date'[RetailYearPeriod]),  10, "Retail", 3, "Retail Period"), 
+					
+					        // Lunar calendar hierarchy levels 
+					        ("LunarYear",  NAMEOF('Date'[LunarYear]),      11, "Lunar", 4, "Lunar Year"), 
+					        ("LunarMonth", NAMEOF('Date'[LunarYearMonth]), 12, "Lunar", 4, "Lunar Month"), 
+					
+					        // 13-Month calendar hierarchy levels 
+					        ("13MonthYear",   NAMEOF('Date'[Period13MYear]),        13, "13-Month", 5, "13-Month Year"), 
+					        ("13MonthPeriod", NAMEOF('Date'[Period13MYearPeriod]), 14, "13-Month", 5, "13-Month Period"), 
+					
+					        // Date (individual date level) 
+					        ("Date", NAMEOF('Date'[Date]), 15, "Date", 6, "Date") 
+					    } 
+					```
+

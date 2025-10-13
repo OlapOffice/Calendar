@@ -1,0 +1,47 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "6c7aecbf00006a3589c7",
+  "position": {
+    "x": 303.7783375314861,
+    "y": 495.11335012594452,
+    "z": 3000,
+    "height": 40.806045340050375,
+    "width": 260.25188916876573,
+    "tabOrder": 9002
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Developer:",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Open Sans, Clear Sans, Helvetica Neue, Helvetica, Arial, Segoe UI Emoji, SF Pro, sans-serif",
+                      "fontSize": "16px",
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": " Howard Taylor",
+                    "textStyle": {
+                      "fontFamily": "Open Sans, Clear Sans, Helvetica Neue, Helvetica, Arial, Segoe UI Emoji, SF Pro, sans-serif",
+                      "fontSize": "16px",
+                      "color": "#333333"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
