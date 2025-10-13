@@ -16,6 +16,7 @@ annotation PBI_ProTooling = ["TMDLView_Desktop","DevMode","CalcGroup"]
 ref table Date
 ref table SlicerDate
 ref table FiscalTimeIntelligence
+ref table DateRolePlaying
 
 ref cultureInfo en-US
 

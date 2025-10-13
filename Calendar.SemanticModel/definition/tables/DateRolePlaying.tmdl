@@ -1,0 +1,572 @@
+table DateRolePlaying
+	lineageTag: c2567e27-fe7a-489b-999c-5a03aca8a6c1
+
+	column DayOfQuarter
+		formatString: 0
+		lineageTag: 649ae1f9-042c-4858-b56b-2a8c9bf03578
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[DayOfQuarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfYear
+		formatString: 0
+		lineageTag: c4626eae-b458-45dd-8235-ca94606e758e
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[DayOfYear]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYear
+		formatString: 0
+		lineageTag: 9be9b5ce-c1a5-4a4a-8325-5df2b7a37550
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[FiscalYear]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalPeriodNumber
+		formatString: 0
+		lineageTag: 89e14c9c-fefd-4a37-b877-4d9b6284553f
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[FiscalPeriodNumber]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalPeriod
+		lineageTag: da7e3c10-f8e3-480e-95a7-d8e26ae6a0c0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[FiscalPeriod]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYearQuarterNumber
+		formatString: 0
+		lineageTag: 76626eef-462b-456f-b30d-413f978d42fa
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[FiscalYearQuarterNumber]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalQuarter
+		lineageTag: ec3c016b-555c-4c6e-8d5d-0d759d4d818e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[FiscalQuarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYearQuarter
+		lineageTag: 2857ef66-1711-420b-b821-5df5f6d6523d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[FiscalYearQuarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYearQuarterOrder
+		formatString: 0
+		lineageTag: 5dcdd889-af90-4842-9944-840a95af23bf
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[FiscalYearQuarterOrder]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYearPeriod
+		lineageTag: 91a4ca25-f275-4a24-8815-4bb50ee9ca87
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[FiscalYearPeriod]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYearPeriodOrder
+		formatString: 0
+		lineageTag: f350dcd9-b640-46fe-9ed8-f99d06d6c3ef
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[FiscalYearPeriodOrder]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalStartDate
+		formatString: General Date
+		lineageTag: 8f5e20e0-9710-4317-b2de-89bec7b6d58c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[FiscalStartDate]
+
+		annotation SummarizationSetBy = Automatic
+
+	column PeriodStartDate
+		formatString: General Date
+		lineageTag: e3c25498-c238-4587-9b60-bd38a2721448
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[PeriodStartDate]
+
+		annotation SummarizationSetBy = Automatic
+
+	column PeriodEndDate
+		formatString: General Date
+		lineageTag: d74fda48-a0c9-4c90-8fdb-cef53946609b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[PeriodEndDate]
+
+		annotation SummarizationSetBy = Automatic
+
+	column PeriodEnd
+		formatString: 0
+		lineageTag: 1ae490d0-8bad-4c4d-a8a4-8d619e5c58b3
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[PeriodEnd]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalQuarterStartDate
+		formatString: General Date
+		lineageTag: 236e94ca-16c8-4a79-aec6-b82e860acefe
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[FiscalQuarterStartDate]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalWeek
+		formatString: 0
+		lineageTag: 3f6cc9b7-84b4-4769-80e2-116afd4df147
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[FiscalWeek]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYearWeek
+		lineageTag: 896ebe57-d3e1-4cd2-af67-c419d44ef9b3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[FiscalYearWeek]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYearWeekOrder
+		formatString: 0
+		lineageTag: 21d8becb-2aae-4740-ac68-59873906a7cc
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[FiscalYearWeekOrder]
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekOfFiscalPeriod
+		formatString: 0
+		lineageTag: f55a4fb4-174b-49e2-ab84-d5af02ce51e0
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[WeekOfFiscalPeriod]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfFiscalPeriod
+		formatString: 0
+		lineageTag: b7cda4a7-66f7-4ea3-aeec-d4009ce5e8f8
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[DayOfFiscalPeriod]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfFiscalQuarter
+		formatString: 0
+		lineageTag: ca3f515b-dc21-4402-a1b4-63f6ddd9037c
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[DayOfFiscalQuarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfFiscalYear
+		formatString: 0
+		lineageTag: 06c03d08-984b-4d58-874f-7b845d174539
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[DayOfFiscalYear]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ISOYearWeek
+		lineageTag: e9c0207b-1ddd-4e62-8af8-bc640a0ac47e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[ISOYearWeek]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ISOYearWeekOrder
+		formatString: 0
+		lineageTag: ea074067-b6de-48ff-a341-919d3b19650c
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[ISOYearWeekOrder]
+
+		annotation SummarizationSetBy = Automatic
+
+	column RetailYear
+		formatString: 0
+		lineageTag: 65c6cdc3-a2f5-461d-a4dc-da33fd17322e
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[RetailYear]
+
+		annotation SummarizationSetBy = Automatic
+
+	column RetailQuarterNumber
+		formatString: 0
+		lineageTag: f5325bf7-07d9-46bb-b536-14cd4d154ca1
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[RetailQuarterNumber]
+
+		annotation SummarizationSetBy = Automatic
+
+	column RetailQuarter
+		lineageTag: 90c3f279-f54e-4fea-b4b8-bae62c153435
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[RetailQuarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column RetailPeriodNumber
+		formatString: 0
+		lineageTag: 32fd13e4-1bcf-47ca-a4db-bca1887424f4
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[RetailPeriodNumber]
+
+		annotation SummarizationSetBy = Automatic
+
+	column RetailYearQuarter
+		lineageTag: e35af43e-1e18-4092-ba9e-ff918297c5a8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[RetailYearQuarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column RetailYearQuarterOrder
+		formatString: 0
+		lineageTag: a8def3b1-907a-4b4a-8ad3-93423a3018ed
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[RetailYearQuarterOrder]
+
+		annotation SummarizationSetBy = Automatic
+
+	column RetailPeriod
+		lineageTag: 90256ca5-c5d5-4c2b-bff1-20c3f6d834fc
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[RetailPeriod]
+
+		annotation SummarizationSetBy = Automatic
+
+	column RetailYearPeriod
+		lineageTag: 9f621e68-1e2c-43db-bee6-5bf92be0eb78
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[RetailYearPeriod]
+
+		annotation SummarizationSetBy = Automatic
+
+	column RetailYearPeriodOrder
+		formatString: 0
+		lineageTag: 65cd8698-1ff8-47ce-9b2e-57545073938c
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[RetailYearPeriodOrder]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Period13MYear
+		formatString: 0
+		lineageTag: 63831deb-8d8c-46e2-82c6-8a5c68a5269c
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[Period13MYear]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Period13MNumber
+		formatString: 0
+		lineageTag: b9af7907-2567-4494-a4d2-75dd238fa236
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[Period13MNumber]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Period13M
+		lineageTag: 5b14822e-e411-42c0-b94f-5d91ff42bce6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[Period13M]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Period13MYearPeriod
+		lineageTag: 0ab4c384-5d5f-4b4e-a037-85a394ac8c23
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[Period13MYearPeriod]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Period13MYearPeriodOrder
+		formatString: 0
+		lineageTag: 0c17196b-f482-4be9-a522-ea73a5f64453
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[Period13MYearPeriodOrder]
+
+		annotation SummarizationSetBy = Automatic
+
+	column LunarYear
+		formatString: 0
+		lineageTag: 54d9a886-a22f-4515-a0a5-87a791ebfe4c
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[LunarYear]
+
+		annotation SummarizationSetBy = Automatic
+
+	column LunarMonthNumber
+		formatString: 0
+		lineageTag: 9908aa6a-73cb-47a3-a5d9-5456ed19456a
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[LunarMonthNumber]
+
+		annotation SummarizationSetBy = Automatic
+
+	column LunarMonth
+		lineageTag: a3f59df4-0b61-42f9-9bde-bd536977864a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[LunarMonth]
+
+		annotation SummarizationSetBy = Automatic
+
+	column LunarYearMonth
+		lineageTag: aab110ef-236c-43fc-8321-cbafeeb8a8c4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[LunarYearMonth]
+
+		annotation SummarizationSetBy = Automatic
+
+	column LunarYearMonthOrder
+		formatString: 0
+		lineageTag: fd160c35-fe9f-4ffe-8e18-00d594d71815
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[LunarYearMonthOrder]
+
+		annotation SummarizationSetBy = Automatic
+
+	column JulianDate
+		formatString: 0
+		lineageTag: 73ecbae5-5755-47c7-9bda-81cfb8c31663
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[JulianDate]
+
+		annotation SummarizationSetBy = Automatic
+
+	column JulianFiscalDateCode
+		lineageTag: 206cbe56-3bf6-4861-9767-70e86e56fe8c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[JulianFiscalDateCode]
+
+		annotation SummarizationSetBy = Automatic
+
+	column JulianFiscalYearNo
+		formatString: 0
+		lineageTag: d55e5e78-33de-400f-bf50-242a527b6785
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[JulianFiscalYearNo]
+
+		annotation SummarizationSetBy = Automatic
+
+	column JulianFiscalYearStart
+		formatString: 0
+		lineageTag: d43748a4-fca7-4c9e-9ca0-bc54b54a7ffb
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[JulianFiscalYearStart]
+
+		annotation SummarizationSetBy = Automatic
+
+	column RelativeDate
+		formatString: 0
+		lineageTag: 7373d58c-1725-4db6-83e0-7fe047d9fc42
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[RelativeDate]
+
+		annotation SummarizationSetBy = Automatic
+
+	column RelativeFiscalPeriod
+		formatString: 0
+		lineageTag: 0a16693f-132b-4676-86c5-575959bfd542
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[RelativeFiscalPeriod]
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsWorkday
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: ef4636d1-a17b-4dd8-a9d6-caf64ffe8ede
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[IsWorkday]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ISOYear
+		lineageTag: af12fd8b-458f-4b98-862c-75a112abb001
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[ISOYear]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ISOWeek
+		lineageTag: 9f7f39b2-8f23-4f46-98e2-ac9abfb3d991
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[ISOWeek]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		formatString: General Date
+		lineageTag: a38f2f17-c386-41ca-9409-a16ad85b376f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYear
+		formatString: 0
+		lineageTag: 5022a554-37ff-4533-b6f1-344323cf6432
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[CalendarYear]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarMonthNumber
+		formatString: 0
+		lineageTag: b3cca219-2758-4b1f-9c31-1048675def4b
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[CalendarMonthNumber]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarMonth
+		lineageTag: 2ec3b5e3-4b1a-4bfa-9f8d-584a9bb466f5
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[CalendarMonth]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarQuarter
+		lineageTag: 726a2671-6f23-4589-80e5-e19ef2af4984
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[CalendarQuarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYearQuarter
+		lineageTag: ca4feca4-6f87-4c2d-8c9d-bc1611421224
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[CalendarYearQuarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYearQuarterOrder
+		formatString: 0
+		lineageTag: 7ba1fb1e-8cfb-4ec7-b914-1107bf3f4c00
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[CalendarYearQuarterOrder]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYearMonth
+		lineageTag: 6618de79-24d8-4fcc-a085-613302b32483
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[CalendarYearMonth]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYearMonthOrder
+		formatString: 0
+		lineageTag: 3fce9128-803b-4b1b-bde4-771ce68aa1bc
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[CalendarYearMonthOrder]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfWeekNumber
+		formatString: 0
+		lineageTag: 32b797b4-5390-4835-b1b9-53eeb99fe9e8
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[DayOfWeekNumber]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfWeek
+		lineageTag: 62729bf7-f635-4707-8e26-70e11f607437
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[DayOfWeek]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfMonth
+		formatString: 0
+		lineageTag: a534d43a-8ddb-48d2-a417-09f3d43aeb13
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[DayOfMonth]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DateRolePlaying = calculated
+		mode: import
+		source = 'Date'
+
+	annotation PBI_Id = d9dae16a67054dc997b24139fcf3ac1c
+

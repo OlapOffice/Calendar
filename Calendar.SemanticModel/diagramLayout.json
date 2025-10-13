@@ -11,7 +11,7 @@
         {
           "location": {
             "x": 672,
-            "y": 4
+            "y": 9
           },
           "nodeIndex": "Date",
           "nodeLineageTag": "abcd",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 606,
-            "y": 363
+            "y": 368
           },
           "nodeIndex": "SlicerDate",
           "nodeLineageTag": "2e55a1f3-d3c4-4ebf-9a8d-5f8f71dcc999",
@@ -36,24 +36,24 @@
         },
         {
           "location": {
-            "x": 284,
-            "y": 50
+            "x": 218,
+            "y": 411
           },
-          "nodeIndex": "_Date_DAX",
+          "nodeIndex": "FiscalTimeIntelligence",
           "size": {
-            "height": 200,
+            "height": 128,
             "width": 234
           },
           "zIndex": 0
         },
         {
           "location": {
-            "x": 218,
-            "y": 406
+            "x": 738,
+            "y": 194.5
           },
-          "nodeIndex": "FiscalTimeIntelligence",
+          "nodeIndex": "DateRolePlaying",
           "size": {
-            "height": 128,
+            "height": 200,
             "width": 234
           },
           "zIndex": 0
