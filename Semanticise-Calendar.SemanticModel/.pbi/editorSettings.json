@@ -3,5 +3,6 @@
   "showHiddenFields": true,
   "parallelQueryLoading": true,
   "typeDetectionEnabled": true,
+  "runBackgroundAnalysis": true,
   "shouldNotifyUserOfNameConflictResolution": true
 }
