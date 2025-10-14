@@ -4,12 +4,12 @@
   "position": {
     "x": 5.200324496899043,
     "y": 74.223500410846341,
-    "z": 5000,
+    "z": 6031,
     "height": 430,
     "width": 509.51456310679617
   },
   "visualGroup": {
-    "displayName": "Date",
+    "displayName": "Range",
     "groupMode": "ScaleMode"
   },
   "parentGroupName": "eebcf789e23c3671a48a",
