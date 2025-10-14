@@ -4,7 +4,7 @@
   "artifacts": [
     {
       "report": {
-        "path": "Calendar.Report"
+        "path": "Semanticise-Calendar.Report"
       }
     }
   ],
