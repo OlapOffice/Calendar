@@ -1,5 +1,5 @@
 # 📅 Power BI Calendar – Multi-Calendar Time Intelligence Template
-**Developer:** Howard Taylor (Semanticise Inc | OLAP Office)
+**Developer:** Howard Taylor (Semanticise Inc | OLAP Office Inc)
  **License:** Free to use and adapt with attribution
 
 ------
@@ -101,4 +101,7 @@ This repository is intended as an **example and template**, and it can be custom
 ## 🏷️ Credits
 
 Developed by **Howard Taylor**
- **© 2025 Semanticise Inc / OLAP Office.** All rights reserved.
+
+Please read the MIT License file included.
+
+ **© 2025 Semanticise Inc / OLAP Office Inc.** All rights reserved. 
