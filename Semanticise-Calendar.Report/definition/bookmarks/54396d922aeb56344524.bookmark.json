@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
-  "displayName": "Date",
+  "displayName": "Range",
   "name": "54396d922aeb56344524",
   "options": {
     "targetVisualNames": [
