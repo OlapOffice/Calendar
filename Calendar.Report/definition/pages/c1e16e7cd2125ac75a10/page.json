@@ -1728,11 +1728,6 @@
     },
     {
       "source": "999c970c6473e2c6b90a",
-      "target": "60b3e3ec40148aba4b86",
-      "type": "DataFilter"
-    },
-    {
-      "source": "999c970c6473e2c6b90a",
       "target": "5f88533c09cc182d191c",
       "type": "NoFilter"
     },
@@ -1763,11 +1758,6 @@
     },
     {
       "source": "e11e2374826b5a95c274",
-      "target": "60b3e3ec40148aba4b86",
-      "type": "DataFilter"
-    },
-    {
-      "source": "e11e2374826b5a95c274",
       "target": "5f88533c09cc182d191c",
       "type": "NoFilter"
     },
@@ -1785,11 +1775,6 @@
       "source": "e11e2374826b5a95c274",
       "target": "9817ce30a70e60713b53",
       "type": "NoFilter"
-    },
-    {
-      "source": "ab1aa22c18c25887d017",
-      "target": "60b3e3ec40148aba4b86",
-      "type": "DataFilter"
     },
     {
       "source": "ab1aa22c18c25887d017",
@@ -2398,22 +2383,12 @@
     },
     {
       "source": "29dac88415683c1381e9",
-      "target": "60b3e3ec40148aba4b86",
-      "type": "DataFilter"
-    },
-    {
-      "source": "29dac88415683c1381e9",
       "target": "a8b5f2370599c473830b",
       "type": "DataFilter"
     },
     {
       "source": "75d56b302690e1c91c23",
       "target": "a8b5f2370599c473830b",
-      "type": "DataFilter"
-    },
-    {
-      "source": "75d56b302690e1c91c23",
-      "target": "60b3e3ec40148aba4b86",
       "type": "DataFilter"
     },
     {

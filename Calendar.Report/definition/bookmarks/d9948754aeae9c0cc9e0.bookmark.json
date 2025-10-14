@@ -17,12 +17,6 @@
     "sections": {
       "c1e16e7cd2125ac75a10": {
         "visualContainers": {
-          "60b3e3ec40148aba4b86": {
-            "singleVisual": {
-              "visualType": "image",
-              "objects": {}
-            }
-          },
           "5c2ce1f1a5ba057257b6": {
             "singleVisual": {
               "visualType": "shape",

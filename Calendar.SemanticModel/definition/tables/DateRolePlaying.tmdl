@@ -1,6 +1,109 @@
 table DateRolePlaying
 	lineageTag: c2567e27-fe7a-489b-999c-5a03aca8a6c1
 
+	column Date
+		formatString: General Date
+		lineageTag: a38f2f17-c386-41ca-9409-a16ad85b376f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYear
+		formatString: 0
+		lineageTag: 5022a554-37ff-4533-b6f1-344323cf6432
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[CalendarYear]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarMonthNumber
+		formatString: 0
+		lineageTag: b3cca219-2758-4b1f-9c31-1048675def4b
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[CalendarMonthNumber]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarMonth
+		lineageTag: 2ec3b5e3-4b1a-4bfa-9f8d-584a9bb466f5
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[CalendarMonth]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarQuarter
+		lineageTag: 726a2671-6f23-4589-80e5-e19ef2af4984
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[CalendarQuarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYearQuarter
+		lineageTag: ca4feca4-6f87-4c2d-8c9d-bc1611421224
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[CalendarYearQuarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYearQuarterOrder
+		formatString: 0
+		lineageTag: 7ba1fb1e-8cfb-4ec7-b914-1107bf3f4c00
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[CalendarYearQuarterOrder]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYearMonth
+		lineageTag: 6618de79-24d8-4fcc-a085-613302b32483
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[CalendarYearMonth]
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYearMonthOrder
+		formatString: 0
+		lineageTag: 3fce9128-803b-4b1b-bde4-771ce68aa1bc
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[CalendarYearMonthOrder]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfWeekNumber
+		formatString: 0
+		lineageTag: 32b797b4-5390-4835-b1b9-53eeb99fe9e8
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[DayOfWeekNumber]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfWeek
+		lineageTag: 62729bf7-f635-4707-8e26-70e11f607437
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Date[DayOfWeek]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfMonth
+		formatString: 0
+		lineageTag: a534d43a-8ddb-48d2-a417-09f3d43aeb13
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Date[DayOfMonth]
+
+		annotation SummarizationSetBy = Automatic
+
 	column DayOfQuarter
 		formatString: 0
 		lineageTag: 649ae1f9-042c-4858-b56b-2a8c9bf03578
@@ -458,109 +561,6 @@ table DateRolePlaying
 		summarizeBy: none
 		isNameInferred
 		sourceColumn: Date[ISOWeek]
-
-		annotation SummarizationSetBy = Automatic
-
-	column Date
-		formatString: General Date
-		lineageTag: a38f2f17-c386-41ca-9409-a16ad85b376f
-		summarizeBy: none
-		isNameInferred
-		sourceColumn: Date[Date]
-
-		annotation SummarizationSetBy = Automatic
-
-	column CalendarYear
-		formatString: 0
-		lineageTag: 5022a554-37ff-4533-b6f1-344323cf6432
-		summarizeBy: sum
-		isNameInferred
-		sourceColumn: Date[CalendarYear]
-
-		annotation SummarizationSetBy = Automatic
-
-	column CalendarMonthNumber
-		formatString: 0
-		lineageTag: b3cca219-2758-4b1f-9c31-1048675def4b
-		summarizeBy: sum
-		isNameInferred
-		sourceColumn: Date[CalendarMonthNumber]
-
-		annotation SummarizationSetBy = Automatic
-
-	column CalendarMonth
-		lineageTag: 2ec3b5e3-4b1a-4bfa-9f8d-584a9bb466f5
-		summarizeBy: none
-		isNameInferred
-		sourceColumn: Date[CalendarMonth]
-
-		annotation SummarizationSetBy = Automatic
-
-	column CalendarQuarter
-		lineageTag: 726a2671-6f23-4589-80e5-e19ef2af4984
-		summarizeBy: none
-		isNameInferred
-		sourceColumn: Date[CalendarQuarter]
-
-		annotation SummarizationSetBy = Automatic
-
-	column CalendarYearQuarter
-		lineageTag: ca4feca4-6f87-4c2d-8c9d-bc1611421224
-		summarizeBy: none
-		isNameInferred
-		sourceColumn: Date[CalendarYearQuarter]
-
-		annotation SummarizationSetBy = Automatic
-
-	column CalendarYearQuarterOrder
-		formatString: 0
-		lineageTag: 7ba1fb1e-8cfb-4ec7-b914-1107bf3f4c00
-		summarizeBy: sum
-		isNameInferred
-		sourceColumn: Date[CalendarYearQuarterOrder]
-
-		annotation SummarizationSetBy = Automatic
-
-	column CalendarYearMonth
-		lineageTag: 6618de79-24d8-4fcc-a085-613302b32483
-		summarizeBy: none
-		isNameInferred
-		sourceColumn: Date[CalendarYearMonth]
-
-		annotation SummarizationSetBy = Automatic
-
-	column CalendarYearMonthOrder
-		formatString: 0
-		lineageTag: 3fce9128-803b-4b1b-bde4-771ce68aa1bc
-		summarizeBy: sum
-		isNameInferred
-		sourceColumn: Date[CalendarYearMonthOrder]
-
-		annotation SummarizationSetBy = Automatic
-
-	column DayOfWeekNumber
-		formatString: 0
-		lineageTag: 32b797b4-5390-4835-b1b9-53eeb99fe9e8
-		summarizeBy: sum
-		isNameInferred
-		sourceColumn: Date[DayOfWeekNumber]
-
-		annotation SummarizationSetBy = Automatic
-
-	column DayOfWeek
-		lineageTag: 62729bf7-f635-4707-8e26-70e11f607437
-		summarizeBy: none
-		isNameInferred
-		sourceColumn: Date[DayOfWeek]
-
-		annotation SummarizationSetBy = Automatic
-
-	column DayOfMonth
-		formatString: 0
-		lineageTag: a534d43a-8ddb-48d2-a417-09f3d43aeb13
-		summarizeBy: sum
-		isNameInferred
-		sourceColumn: Date[DayOfMonth]
 
 		annotation SummarizationSetBy = Automatic
 

@@ -1315,12 +1315,6 @@
               "visualType": "shape",
               "objects": {}
             }
-          },
-          "60b3e3ec40148aba4b86": {
-            "singleVisual": {
-              "visualType": "image",
-              "objects": {}
-            }
           }
         },
         "visualContainerGroups": {

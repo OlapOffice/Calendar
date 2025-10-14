@@ -6,8 +6,7 @@
     "y": 5.2783505154639174,
     "z": 10000,
     "height": 63,
-    "width": 410.39175257731961,
-    "tabOrder": 9000
+    "width": 410.39175257731961
   },
   "visual": {
     "visualType": "bookmarkNavigator",
@@ -18,7 +17,7 @@
             "selectedBookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'64978cdb468590784e03'"
+                  "Value": "'e48f91b137647b4da12a'"
                 }
               }
             }
