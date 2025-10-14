@@ -59,19 +59,48 @@ Or open directly in Power BI Desktop using the **TMDL View** (left margin).
 
 ------
 
-## ⚙️ How to Use
+1. ## ⚙️ How to Use
 
-1. Clone or download the repository:
+   1. **Clone or download the repository:**
 
-   ```
-   git clone https://github.com/OlapOffice/Calendar.git
-   ```
+      ```
+      git clone https://github.com/OlapOffice/Calendar.git
+      ```
 
-2. Open `Calendar.pbip` in Power BI Desktop.
+   2. **Open the project:**
+       Launch `Calendar.pbip` in **Power BI Desktop** (or Fabric workspace) to explore the model and visuals.
 
-3. Review and modify the configuration section in the Power Query editor to set your fiscal year-end and date range.
+   3. **Review the configuration:**
+       In **Power Query**, open the `Date` query and adjust the configuration section to define:
 
-4. Customize the model as needed for your own solution.
+      - Start and end dates
+      - Fiscal year-end month
+      - Optional retail or lunar calendars
+
+   4. **Use the Calendar Template page:**
+
+      - The included **“Page Calendar Template”** report page serves as a *starting point* for building new analytics views.
+      - To create a new report page, **duplicate this template** and adapt it for your specific use case — for example, Sales, Financials, or Operations.
+      - The **Calendar visuals, slicers, and measures** can be easily tailored to display the relevant **Calendar, Fiscal, or ISO** views based on the slicer selection.
+
+   5. **Integrate into your solution:**
+
+      - Copy the `.tmdl` files from
+
+        ```
+        ..\Semanticise-Calendar.SemanticModel\TMDLScripts
+        ```
+
+        into your Power BI Project or Fabric Semantic Model folder.
+
+      - Open Power BI Desktop and enable the **TMDL View** to confirm the imported Date, SlicerDate, DateRolePlaying, and FiscalTimeIntelligence definitions.
+
+      - Mark `Date` as the official Date Table, validate relationships, and refresh.
+
+   6. **Customize further:**
+
+      - Extend the model by adding your organization’s **custom fiscal logic**, **UDFs**, or **time-based KPIs**.
+      - Optionally, integrate the Calendar framework into an existing semantic model to ensure alignment across datasets.
 
 ------
 
