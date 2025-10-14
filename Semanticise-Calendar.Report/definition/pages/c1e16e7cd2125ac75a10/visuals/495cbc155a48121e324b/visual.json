@@ -4,7 +4,7 @@
   "position": {
     "x": 1235.6535433070867,
     "y": 0,
-    "z": 4000,
+    "z": 1000,
     "height": 40.314960629921259,
     "width": 44.346456692913385,
     "tabOrder": 9003
@@ -50,6 +50,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'64978cdb468590784e03'"
+                }
+              }
+            },
+            "tooltip": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Click for Calendar'"
                 }
               }
             }

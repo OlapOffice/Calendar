@@ -100,7 +100,7 @@ table SlicerDate
 				        ("13MonthPeriod", NAMEOF('Date'[Period13MYearPeriod]), 14, "13-Month", 5, "13-Month Period"), 
 				
 				        // Date (individual date level) 
-				        ("Date", NAMEOF('Date'[Date]), 15, "Date", 6, "Date") 
+				        ("Date", NAMEOF('Date'[Date]), 15, "Range", 6, "Range") 
 				    } 
 				```
 

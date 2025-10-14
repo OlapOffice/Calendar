@@ -3,9 +3,9 @@
   "name": "74854ffa29ca6e49c31b",
   "position": {
     "x": 4.5601688476719815,
-    "y": 208.9949667810925,
-    "z": 4001,
-    "height": 186.88705234159778,
+    "y": 243.08128450377387,
+    "z": 2000,
+    "height": 152.80073461891644,
     "width": 598.27364554637279,
     "tabOrder": 9004
   },
@@ -19,31 +19,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "POWER BI CALENDAR",
+                    "value": "POWER BI CALENDAR - FREE",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "18pt",
                       "color": "#d64550"
-                    }
-                  }
-                ],
-                "horizontalTextAlignment": "center"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Free Download",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "18pt",
-                      "color": "#41a4ff"
                     }
                   }
                 ],

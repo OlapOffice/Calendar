@@ -3,13 +3,7 @@
   "displayName": "13-Month",
   "name": "73312b5416c12964570e",
   "options": {
-    "targetVisualNames": [
-      "660cb67155652746b084",
-      "78686f5fb3d0a1bb6e62",
-      "83d642e80ab1528d6080",
-      "9a262755caae8adb489c",
-      "ad52b2785e875ed54432"
-    ],
+    "targetVisualNames": [],
     "suppressData": true
   },
   "explorationState": {
@@ -22,7 +16,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "604ff02f05ae6060accb",
+                  "name": "bb9f557c91264677b072",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -52,7 +46,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "d90e18b12ebeb119b2a7",
+                  "name": "dcba4f97e4e10de2035e",
                   "type": "Advanced",
                   "expression": {
                     "HierarchyLevel": {
@@ -204,7 +198,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "1bd7569fddbd97b55981",
+                  "name": "9117f7c413d990dd19d2",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -229,6 +223,53 @@
               "visualType": "slicer",
               "objects": {
                 "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "d",
+                                "Entity": "Date",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "d"
+                                            }
+                                          },
+                                          "Property": "ISOYear"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'2021'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
                   "data": [
                     {
                       "properties": {
@@ -262,7 +303,34 @@
                     }
                   }
                 ]
-              }
+              },
+              "cachedFilterDisplayItems": [
+                {
+                  "id": {
+                    "scopeId": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "Date"
+                              }
+                            },
+                            "Property": "ISOYear"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'2021'"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "displayName": "2021"
+                }
+              ]
             }
           },
           "3a917c31560453a0e884": {
@@ -275,7 +343,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "79cd765e1058522a9988",
+                  "name": "8c1ddfd034b3b074e955",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -300,7 +368,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "9bc5e1d6333860469699",
+                  "name": "918e5bb01d01c5deda50",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -321,6 +389,12 @@
               "objects": {}
             }
           },
+          "495cbc155a48121e324b": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
           "51c2d3cd93300716eb48": {
             "singleVisual": {
               "visualType": "shape",
@@ -331,7 +405,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "5884d9bbe078005686e5",
+                  "name": "9d1faed605da373d4005",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -458,7 +532,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "8cc3a67fccd99ba520ec",
+                  "name": "4914de1633b873206cee",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -513,7 +587,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "c1b731df2801a6c620d1",
+                  "name": "fea7fa2720c5e0a16227",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -649,11 +723,17 @@
               }
             }
           },
+          "6c7aecbf00006a3589c7": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
           "75d56b302690e1c91c23": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "a175572c7157a9daabeb",
+                  "name": "5689d6f79b9119379a32",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -689,7 +769,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "3a7f7e351855c0496a06",
+                  "name": "69802b3c4b466004665d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -831,7 +911,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "11f0312ae0330d139413",
+                  "name": "6d7d59cdbd3800e9572c",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -862,7 +942,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "bc746e2bb7687639e569",
+                  "name": "577523b0e49259b420c0",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -946,7 +1026,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "ec402583a49e16b5bb50",
+                  "name": "157c46ac57656baab518",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -971,7 +1051,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "9d572e23d6543dd0b005",
+                  "name": "e73f4326ba9de3caacab",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1073,7 +1153,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "40885ffc40d007bd331d",
+                  "name": "1fd85c9b92da6bec5de7",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -1103,7 +1183,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "0817aeb6b74398384d30",
+                  "name": "cde92e461b506b61d980",
                   "type": "Advanced",
                   "expression": {
                     "HierarchyLevel": {
@@ -1261,7 +1341,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "5b0c21b2754c7b0da56d",
+                  "name": "6708195613a4ca72524d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1329,7 +1409,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "0385d282aca74bb18343",
+                  "name": "a48e2fc3158d2909e35e",
                   "type": "Advanced",
                   "expression": {
                     "HierarchyLevel": {
@@ -1354,6 +1434,53 @@
               "visualType": "slicer",
               "objects": {
                 "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "d",
+                                "Entity": "Date",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "d"
+                                            }
+                                          },
+                                          "Property": "LunarYear"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "2021L"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
                   "data": [
                     {
                       "properties": {
@@ -1387,14 +1514,41 @@
                     }
                   }
                 ]
-              }
+              },
+              "cachedFilterDisplayItems": [
+                {
+                  "id": {
+                    "scopeId": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "Date"
+                              }
+                            },
+                            "Property": "LunarYear"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "2021L"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "displayName": "2021"
+                }
+              ]
             }
           },
           "ad52b2785e875ed54432": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "51c58d8f8440527eb480",
+                  "name": "40f1d52f929c7da44600",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -1436,7 +1590,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "3aee03e00c2152aaa707",
+                  "name": "15eebae00950d950dd53",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1491,7 +1645,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "7f9c1e7b3da293e01005",
+                  "name": "f49189570c402c1e6576",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -1516,7 +1670,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "58f89b88810136916b20",
+                  "name": "2fb257d60775b95ed66a",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -1581,7 +1735,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "90cb8423689dcd150b2e",
+                  "name": "d8580a15917007c47de2",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -1606,7 +1760,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "8fd44faf3dd71704cad7",
+                  "name": "81ed4a129ca50d14342e",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -1631,7 +1785,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "961329a094b1dce1ea90",
+                  "name": "4d98159daeb3b32a9941",
                   "type": "Advanced",
                   "expression": {
                     "HierarchyLevel": {
@@ -1656,6 +1810,53 @@
               "visualType": "slicer",
               "objects": {
                 "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "d",
+                                "Entity": "Date",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "d"
+                                            }
+                                          },
+                                          "Property": "RetailYear"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "2021L"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
                   "data": [
                     {
                       "properties": {
@@ -1689,12 +1890,45 @@
                     }
                   }
                 ]
-              }
+              },
+              "cachedFilterDisplayItems": [
+                {
+                  "id": {
+                    "scopeId": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "Date"
+                              }
+                            },
+                            "Property": "RetailYear"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "2021L"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "displayName": "2021"
+                }
+              ]
             }
           },
           "f5f47e9bddda3d4a1100": {
             "singleVisual": {
               "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "74854ffa29ca6e49c31b": {
+            "singleVisual": {
+              "visualType": "textbox",
               "objects": {}
             }
           }
