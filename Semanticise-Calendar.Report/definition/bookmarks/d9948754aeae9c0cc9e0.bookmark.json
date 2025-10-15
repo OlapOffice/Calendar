@@ -17,17 +17,11 @@
     "sections": {
       "c1e16e7cd2125ac75a10": {
         "visualContainers": {
-          "5c2ce1f1a5ba057257b6": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "999c970c6473e2c6b90a": {
+          "1c8732739b0510c0a017": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "42e4feb6d6a047a9ee0e",
+                  "name": "f36bb673e6be0e638b82",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -38,236 +32,7 @@
                               "Entity": "Date"
                             }
                           },
-                          "Hierarchy": "Lunar Periods"
-                        }
-                      },
-                      "Level": "Month"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "advancedSlicerVisual",
-              "objects": {}
-            }
-          },
-          "ab1aa22c18c25887d017": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "5a69c8b62a4ad01576b9",
-                  "type": "Advanced",
-                  "expression": {
-                    "HierarchyLevel": {
-                      "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Date"
-                            }
-                          },
-                          "Hierarchy": "Lunar Periods"
-                        }
-                      },
-                      "Level": "Year"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Basic'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "HierarchyLevel": {
-                      "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Date"
-                            }
-                          },
-                          "Hierarchy": "Lunar Periods"
-                        }
-                      },
-                      "Level": "Year"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "e11e2374826b5a95c274": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "aac0b1a13522ebb96003",
-                  "type": "Advanced",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Date"
-                        }
-                      },
-                      "Property": "DayOfMonth"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "advancedSlicerVisual",
-              "objects": {}
-            }
-          },
-          "78686f5fb3d0a1bb6e62": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "83d642e80ab1528d6080": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "3c9e02b6c4a67354e705",
-                  "type": "Advanced",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Date"
-                        }
-                      },
-                      "Property": "DayOfMonth"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "advancedSlicerVisual",
-              "objects": {}
-            }
-          },
-          "9a262755caae8adb489c": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "9cdb34b272350e00bb65",
-                  "type": "Advanced",
-                  "expression": {
-                    "HierarchyLevel": {
-                      "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Date"
-                            }
-                          },
-                          "Hierarchy": "13-Month Periods"
-                        }
-                      },
-                      "Level": "Year"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Basic'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ],
-                  "selection": [
-                    {
-                      "properties": {
-                        "strictSingleSelect": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "false"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "HierarchyLevel": {
-                      "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Date"
-                            }
-                          },
-                          "Hierarchy": "13-Month Periods"
-                        }
-                      },
-                      "Level": "Year"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "ad52b2785e875ed54432": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "b7fefe6c1a49c23d8074",
-                  "type": "Categorical",
-                  "expression": {
-                    "HierarchyLevel": {
-                      "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Date"
-                            }
-                          },
-                          "Hierarchy": "13-Month Periods"
+                          "Hierarchy": "Retail Periods"
                         }
                       },
                       "Level": "Period"
@@ -282,17 +47,11 @@
               "objects": {}
             }
           },
-          "8adb8507cd6ad0c60130": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
           "1def7330a0a107e5c006": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "d41c98a0008db51440bc",
+                  "name": "3da7e33141a409198d16",
                   "type": "Advanced",
                   "expression": {
                     "HierarchyLevel": {
@@ -350,7 +109,7 @@
                                       [
                                         {
                                           "Literal": {
-                                            "Value": "2020L"
+                                            "Value": "2021L"
                                           }
                                         }
                                       ]
@@ -429,62 +188,36 @@
                         },
                         "Right": {
                           "Literal": {
-                            "Value": "2020L"
+                            "Value": "2021L"
                           }
                         }
                       }
                     }
                   },
-                  "displayName": "2020"
+                  "displayName": "2021"
                 }
               ]
             }
           },
-          "5f88533c09cc182d191c": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "9817ce30a70e60713b53": {
+          "29dac88415683c1381e9": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "1dfb2a768c0991242e73",
-                  "type": "Advanced",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Date"
-                        }
-                      },
-                      "Property": "CalendarMonthNumber"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "advancedSlicerVisual",
-              "objects": {}
-            }
-          },
-          "c5ba1022a38b1a217957": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "3c2764650cb02b50e02d",
+                  "name": "a378e5bb2a43911ecbd0",
                   "type": "Categorical",
                   "expression": {
-                    "Column": {
+                    "HierarchyLevel": {
                       "Expression": {
-                        "SourceRef": {
-                          "Entity": "Date"
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Date"
+                            }
+                          },
+                          "Hierarchy": "ISO"
                         }
                       },
-                      "Property": "CalendarQuarter"
+                      "Level": "ISOYear"
                     }
                   },
                   "howCreated": 0
@@ -495,6 +228,53 @@
               "visualType": "slicer",
               "objects": {
                 "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "d",
+                                "Entity": "Date",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "d"
+                                            }
+                                          },
+                                          "Property": "ISOYear"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'2021'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
                   "data": [
                     {
                       "properties": {
@@ -513,42 +293,49 @@
               "activeProjections": {
                 "Values": [
                   {
-                    "Column": {
+                    "HierarchyLevel": {
                       "Expression": {
-                        "SourceRef": {
-                          "Entity": "Date"
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Date"
+                            }
+                          },
+                          "Hierarchy": "ISO"
                         }
                       },
-                      "Property": "CalendarQuarter"
+                      "Level": "ISOYear"
                     }
                   }
                 ]
-              }
-            }
-          },
-          "e5062d8bd530b05359e9": {
-            "filters": {
-              "byExpr": [
+              },
+              "cachedFilterDisplayItems": [
                 {
-                  "name": "e55c80a68ed3d2ad7d87",
-                  "type": "Advanced",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Date"
+                  "id": {
+                    "scopeId": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "Date"
+                              }
+                            },
+                            "Property": "ISOYear"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'2021'"
+                          }
                         }
-                      },
-                      "Property": "DayOfMonth"
+                      }
                     }
                   },
-                  "howCreated": 0
+                  "displayName": "2021"
                 }
               ]
-            },
-            "singleVisual": {
-              "visualType": "advancedSlicerVisual",
-              "objects": {}
             }
           },
           "3a917c31560453a0e884": {
@@ -561,7 +348,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "836aff04b53530ae1580",
+                  "name": "f46b646442adb1a350e3",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -582,11 +369,48 @@
               "objects": {}
             }
           },
+          "4544fac0800870000a05": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "5a322a39065b57c9acdb",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "DayOfMonth"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {}
+            }
+          },
+          "495cbc155a48121e324b": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "51c2d3cd93300716eb48": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
           "5b21278f4b7bd2b840d8": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "1159a8a64b764c1e4a15",
+                  "name": "2c5f364faa4799553e70",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -697,11 +521,23 @@
               }
             }
           },
+          "5c2ce1f1a5ba057257b6": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "5f88533c09cc182d191c": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
           "616205a0bab230009393": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "3fc630f8eae450762074",
+                  "name": "48974c80728d72030527",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -756,7 +592,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "c696e4790b00aba51e75",
+                  "name": "cfe8d98fcced8915aa06",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -777,547 +613,11 @@
               "objects": {}
             }
           },
-          "9948f1bbaac4400ae16a": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "c6e8307718d40ad92555",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "FiscalTimeIntelligence"
-                        }
-                      },
-                      "Property": "TimeIntelligence"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "advancedSlicerVisual",
-              "objects": {
-                "merge": {
-                  "general": [
-                    {
-                      "properties": {
-                        "filter": {
-                          "filter": {
-                            "Version": 2,
-                            "From": [
-                              {
-                                "Name": "t",
-                                "Entity": "FiscalTimeIntelligence",
-                                "Type": 0
-                              }
-                            ],
-                            "Where": [
-                              {
-                                "Condition": {
-                                  "In": {
-                                    "Expressions": [
-                                      {
-                                        "Column": {
-                                          "Expression": {
-                                            "SourceRef": {
-                                              "Source": "t"
-                                            }
-                                          },
-                                          "Property": "TimeIntelligence"
-                                        }
-                                      }
-                                    ],
-                                    "Values": [
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'Ytd'"
-                                          }
-                                        }
-                                      ],
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'Ytd PY'"
-                                          }
-                                        }
-                                      ],
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'Ytd v Ytd PY'"
-                                          }
-                                        }
-                                      ],
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'Ytd v Ytd PY %'"
-                                          }
-                                        }
-                                      ]
-                                    ]
-                                  }
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "d1e3fcc4170492d8b72c": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "3ff313d303505eea3d58",
-                  "type": "Advanced",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Date"
-                        }
-                      },
-                      "Property": "FiscalPeriodNumber"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "advancedSlicerVisual",
-              "objects": {}
-            }
-          },
-          "1c8732739b0510c0a017": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "dd3ac6e12b3a026456a9",
-                  "type": "Categorical",
-                  "expression": {
-                    "HierarchyLevel": {
-                      "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Date"
-                            }
-                          },
-                          "Hierarchy": "Retail Periods"
-                        }
-                      },
-                      "Level": "Period"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "advancedSlicerVisual",
-              "objects": {}
-            }
-          },
-          "4544fac0800870000a05": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "b4faf89a04180d8707d1",
-                  "type": "Advanced",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Date"
-                        }
-                      },
-                      "Property": "DayOfMonth"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "advancedSlicerVisual",
-              "objects": {}
-            }
-          },
-          "51c2d3cd93300716eb48": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "d77fe986d20b0bc2c324": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "1cbcb3c21820117a49c0",
-                  "type": "Categorical",
-                  "expression": {
-                    "HierarchyLevel": {
-                      "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Date"
-                            }
-                          },
-                          "Hierarchy": "Retail Periods"
-                        }
-                      },
-                      "Level": "Quarter"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Basic'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "HierarchyLevel": {
-                      "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Date"
-                            }
-                          },
-                          "Hierarchy": "Retail Periods"
-                        }
-                      },
-                      "Level": "Quarter"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "f43892b035a6d72390b9": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "5184cbbb804db87598c2",
-                  "type": "Advanced",
-                  "expression": {
-                    "HierarchyLevel": {
-                      "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Date"
-                            }
-                          },
-                          "Hierarchy": "Retail Periods"
-                        }
-                      },
-                      "Level": "Year"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Basic'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ],
-                  "selection": [
-                    {
-                      "properties": {
-                        "strictSingleSelect": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "false"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "HierarchyLevel": {
-                      "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Date"
-                            }
-                          },
-                          "Hierarchy": "Retail Periods"
-                        }
-                      },
-                      "Level": "Year"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "a8b5f2370599c473830b": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "4d0b226742e7104ce543",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Date"
-                        }
-                      },
-                      "Property": "IsWorkday"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "general": [
-                    {
-                      "properties": {
-                        "filter": {
-                          "filter": {
-                            "Version": 2,
-                            "From": [
-                              {
-                                "Name": "d",
-                                "Entity": "Date",
-                                "Type": 0
-                              }
-                            ],
-                            "Where": [
-                              {
-                                "Condition": {
-                                  "In": {
-                                    "Expressions": [
-                                      {
-                                        "Column": {
-                                          "Expression": {
-                                            "SourceRef": {
-                                              "Source": "d"
-                                            }
-                                          },
-                                          "Property": "IsWorkday"
-                                        }
-                                      }
-                                    ],
-                                    "Values": [
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "true"
-                                          }
-                                        }
-                                      ]
-                                    ]
-                                  }
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    }
-                  ],
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ],
-                  "selection": [
-                    {
-                      "properties": {
-                        "strictSingleSelect": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "false"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Date"
-                        }
-                      },
-                      "Property": "IsWorkday"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "bd92d1f8471608b93ead": {
-            "singleVisual": {
-              "visualType": "bookmarkNavigator",
-              "objects": {}
-            }
-          },
-          "8c5f3bc70e45d36a5049": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "7071f631d998b886c8ad",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Date"
-                        }
-                      },
-                      "Property": "Date"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "startDate": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "datetime'2014-05-04T01:00:00'"
-                            }
-                          }
-                        },
-                        "endDate": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "datetime'2030-12-31T00:00:00'"
-                            }
-                          }
-                        },
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Between'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "orderBy": [
-                {
-                  "Direction": 1,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Date"
-                        }
-                      },
-                      "Property": "Date"
-                    }
-                  }
-                }
-              ],
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Date"
-                        }
-                      },
-                      "Property": "Date"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "a02a81ae7d10b79e8cb8": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
           "68d9845cda08ae9e8877": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "3854d0eeac00c1b7a73a",
+                  "name": "3b6efd96490334bb05a0",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1428,11 +728,59 @@
               }
             }
           },
+          "6c7aecbf00006a3589c7": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "74854ffa29ca6e49c31b": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "75d56b302690e1c91c23": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "ac61c47a21ea80970003",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Date"
+                            }
+                          },
+                          "Hierarchy": "ISO"
+                        }
+                      },
+                      "Level": "ISOWeek"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {}
+            }
+          },
+          "78686f5fb3d0a1bb6e62": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
           "7928c967ab15b0d72b60": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "0edd82931832d1ca18d0",
+                  "name": "577f49149e3942a10e90",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1554,7 +902,7 @@
                                 "Entity": "SlicerDate"
                               }
                             },
-                            "Property": "TimeField"
+                            "Property": "SlicerField"
                           }
                         },
                         "Right": {
@@ -1570,23 +918,253 @@
               ]
             }
           },
+          "83d642e80ab1528d6080": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "8affe0bb1c2b96b2eaab",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "DayOfMonth"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {}
+            }
+          },
+          "8adb8507cd6ad0c60130": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "8c5f3bc70e45d36a5049": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "acafe1274ad0ee06c48d",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "Date"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "startDate": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "datetime'2014-05-04T01:00:00'"
+                            }
+                          }
+                        },
+                        "endDate": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "datetime'2030-12-31T00:00:00'"
+                            }
+                          }
+                        },
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Between'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "Date"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "Date"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "9817ce30a70e60713b53": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "28ac1289986980b62010",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "CalendarMonthNumber"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {}
+            }
+          },
+          "9948f1bbaac4400ae16a": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "451971a84225e7a23610",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FiscalTimeIntelligence"
+                        }
+                      },
+                      "Property": "TimeIntelligence"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "t",
+                                "Entity": "FiscalTimeIntelligence",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "t"
+                                            }
+                                          },
+                                          "Property": "TimeIntelligence"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'Ytd'"
+                                          }
+                                        }
+                                      ],
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'Ytd PY'"
+                                          }
+                                        }
+                                      ],
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'Ytd v Ytd PY'"
+                                          }
+                                        }
+                                      ],
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'Ytd v Ytd PY %'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
           "9975249ee1c2727b0390": {
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
             }
           },
-          "f5f47e9bddda3d4a1100": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "29dac88415683c1381e9": {
+          "999c970c6473e2c6b90a": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "b5f358b05a9a110055d3",
+                  "name": "7f766a3fb6b80068e738",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -1597,10 +1175,527 @@
                               "Entity": "Date"
                             }
                           },
-                          "Hierarchy": "ISO"
+                          "Hierarchy": "Lunar Periods"
                         }
                       },
-                      "Level": "ISOYear"
+                      "Level": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {}
+            }
+          },
+          "9a262755caae8adb489c": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "75a38aaa03de4bb7ab15",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Date"
+                            }
+                          },
+                          "Hierarchy": "13-Month Periods"
+                        }
+                      },
+                      "Level": "Year"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "d",
+                                "Entity": "Date",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "d"
+                                            }
+                                          },
+                                          "Property": "Period13MYear"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "2021L"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Basic'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "selection": [
+                    {
+                      "properties": {
+                        "strictSingleSelect": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Date"
+                            }
+                          },
+                          "Hierarchy": "13-Month Periods"
+                        }
+                      },
+                      "Level": "Year"
+                    }
+                  }
+                ]
+              },
+              "cachedFilterDisplayItems": [
+                {
+                  "id": {
+                    "scopeId": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "Date"
+                              }
+                            },
+                            "Property": "Period13MYear"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "2021L"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "displayName": "2021"
+                }
+              ]
+            }
+          },
+          "a02a81ae7d10b79e8cb8": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "a8b5f2370599c473830b": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "1fac3bbd9b36850e3980",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "IsWorkday"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "selection": [
+                    {
+                      "properties": {
+                        "strictSingleSelect": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "false"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "IsWorkday"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "ab1aa22c18c25887d017": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "ca961c2a201b03aa96a1",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Date"
+                            }
+                          },
+                          "Hierarchy": "Lunar Periods"
+                        }
+                      },
+                      "Level": "Year"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "d",
+                                "Entity": "Date",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "d"
+                                            }
+                                          },
+                                          "Property": "LunarYear"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "2021L"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Basic'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Date"
+                            }
+                          },
+                          "Hierarchy": "Lunar Periods"
+                        }
+                      },
+                      "Level": "Year"
+                    }
+                  }
+                ]
+              },
+              "cachedFilterDisplayItems": [
+                {
+                  "id": {
+                    "scopeId": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "Date"
+                              }
+                            },
+                            "Property": "LunarYear"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "2021L"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "displayName": "2021"
+                }
+              ]
+            }
+          },
+          "ad52b2785e875ed54432": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "6d7f75b3798ced15b17e",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Date"
+                            }
+                          },
+                          "Hierarchy": "13-Month Periods"
+                        }
+                      },
+                      "Level": "Period"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {}
+            }
+          },
+          "b01328e262004d08e8e8": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "bd92d1f8471608b93ead": {
+            "singleVisual": {
+              "visualType": "bookmarkNavigator",
+              "objects": {}
+            }
+          },
+          "c5ba1022a38b1a217957": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "07ffeae7e2b0667e133d",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "CalendarQuarter"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Basic'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "CalendarQuarter"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "d1e3fcc4170492d8b72c": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e4539c4823b108da35b8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "FiscalPeriodNumber"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {}
+            }
+          },
+          "d77fe986d20b0bc2c324": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "1701b1aca3ac96dcde13",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Date"
+                            }
+                          },
+                          "Hierarchy": "Retail Periods"
+                        }
+                      },
+                      "Level": "Quarter"
                     }
                   },
                   "howCreated": 0
@@ -1637,22 +1732,72 @@
                               "Entity": "Date"
                             }
                           },
-                          "Hierarchy": "ISO"
+                          "Hierarchy": "Retail Periods"
                         }
                       },
-                      "Level": "ISOYear"
+                      "Level": "Quarter"
                     }
                   }
                 ]
               }
             }
           },
-          "75d56b302690e1c91c23": {
+          "e11e2374826b5a95c274": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "96799e2036ca9606a706",
-                  "type": "Categorical",
+                  "name": "0400a067c3a71d724937",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "DayOfMonth"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {}
+            }
+          },
+          "e5062d8bd530b05359e9": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "d6c1cc1bece3bc000bd5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Property": "DayOfMonth"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {}
+            }
+          },
+          "f43892b035a6d72390b9": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "d1cdf9000c90e212220c",
+                  "type": "Advanced",
                   "expression": {
                     "HierarchyLevel": {
                       "Expression": {
@@ -1662,10 +1807,10 @@
                               "Entity": "Date"
                             }
                           },
-                          "Hierarchy": "ISO"
+                          "Hierarchy": "Retail Periods"
                         }
                       },
-                      "Level": "ISOWeek"
+                      "Level": "Year"
                     }
                   },
                   "howCreated": 0
@@ -1673,7 +1818,122 @@
               ]
             },
             "singleVisual": {
-              "visualType": "advancedSlicerVisual",
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "d",
+                                "Entity": "Date",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "d"
+                                            }
+                                          },
+                                          "Property": "RetailYear"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "2021L"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Basic'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Date"
+                            }
+                          },
+                          "Hierarchy": "Retail Periods"
+                        }
+                      },
+                      "Level": "Year"
+                    }
+                  }
+                ]
+              },
+              "cachedFilterDisplayItems": [
+                {
+                  "id": {
+                    "scopeId": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "Date"
+                              }
+                            },
+                            "Property": "RetailYear"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "2021L"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "displayName": "2021"
+                }
+              ]
+            }
+          },
+          "f5f47e9bddda3d4a1100": {
+            "singleVisual": {
+              "visualType": "shape",
               "objects": {}
             }
           }
@@ -1694,10 +1954,10 @@
               "a1620ea3821aa005905a": {
                 "isHidden": true
               },
-              "d406efa230e03ecc371d": {
-                "isHidden": false
-              },
               "a6f7bed506ea0b3395e9": {
+                "isHidden": true
+              },
+              "d406efa230e03ecc371d": {
                 "isHidden": true
               },
               "ee87c44608ed30ed009e": {

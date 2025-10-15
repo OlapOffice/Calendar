@@ -36,10 +36,11 @@
         },
         {
           "location": {
-            "x": 218,
-            "y": 411
+            "x": 288,
+            "y": 376
           },
           "nodeIndex": "FiscalTimeIntelligence",
+          "nodeLineageTag": "2b7a913e-a5f9-4b1f-8d96-cb1234567890",
           "size": {
             "height": 128,
             "width": 234
@@ -48,8 +49,8 @@
         },
         {
           "location": {
-            "x": 925,
-            "y": 350.5
+            "x": 927,
+            "y": 370.5
           },
           "nodeIndex": "DateRolePlaying",
           "nodeLineageTag": "c2567e27-fe7a-489b-999c-5a03aca8a6c1",

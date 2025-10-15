@@ -182,7 +182,7 @@
                                       "Entity": "SlicerDate"
                                     }
                                   },
-                                  "Property": "SlicerField"
+                                  "Property": "TimeField"
                                 }
                               }
                             }
